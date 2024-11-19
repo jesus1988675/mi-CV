@@ -1,0 +1,412 @@
+:root {
+    --color-fondo: #ffffff; /* Cambia el fondo principal a blanco */
+    --color-encabezado: #333;
+    --color-texto: #555;
+    --separador: #ddd;
+    --color-acento: #0055a5;
+    --color-enlace: #0073e6;
+    --color-hover: #003a70;
+}
+
+/* Asegura que las partículas cubran toda la pantalla pero no interfieran con el contenido */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto; /* Permite el desplazamiento */
+}
+
+/* Fondo de partículas */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: none;
+}
+
+/* Estilo base para el body */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo); /* Fondo blanco */
+    color: var(--color-texto);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Contenedor principal con tres columnas */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Estilo para el cuadro del nombre */
+.nombre-cv {
+    background: linear-gradient(135deg, var(--color-acento), #0077cc);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px var(--sombra-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4em;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nombre-cv:hover {
+    transform: scale(1.03);
+}
+
+/* Estilos para las columnas */
+.column {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--color-sombra);
+    padding: 20px;
+    flex: 1;
+    max-width: 32%;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenido dentro de las columnas */
+.profile,
+.experiencia,
+.certificados {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustes para la foto de perfil */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Espaciado alrededor de la imagen */
+    background: #f7f8f8; /* Fondo claro */
+    border-radius: 10px; /* Opcional, si quieres bordes suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+
+.nombre {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-encabezado);
+    margin-bottom: 5px; /* Reduce el espacio debajo del nombre */
+}
+
+.profile-pic {
+    display: block; /* Asegura que la imagen se trate como bloque */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantén la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    border-radius: 8px; /* Da bordes suaves */
+    filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
+    border: 5px solid #fff; /* Añade un borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra profesional */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Suaviza animaciones */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Ampliación ligera para destacar */
+}
+
+/* Estilo para las secciones de experiencia y proyectos */
+article {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    article h3 {
+        font-size: 1.1rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+}
+
+/* Enlaces de certificados y habilidades */
+.certificado-link,
+.habilidad {
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    color: var(--color-enlace);
+}
+
+.certificado-link:hover {
+    text-decoration: underline;
+    color: var(--color-hover);
+}
+
+.certificado-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las barras de habilidad */
+/* Estilos para las barras de habilidad */
+.habilidad {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.habilidad i {
+    font-size: 20px;
+    color: #555;
+    margin-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.habilidad i:hover {
+    color: #007bff; /* Cambia al color de acento */
+    transform: scale(1.2); /* Aumenta el tamaño ligeramente */
+}
+
+.habilidad label {
+    font-weight: bold;
+    margin-right: 10px;
+    flex-shrink: 0; /* Evita que el label se reduzca */
+}
+progress {
+    flex-grow: 1;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+}
+
+progress::-webkit-progress-value {
+    background-color: #007bff; /* Color de la barra */
+}
+
+
+/* QR */
+#qr-container {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid var(--separador);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#codigo-qr img {
+    box-shadow: 2px 2px 6px rgba(163, 177, 198, 0.5), -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 100%;
+    }
+
+    .nombre {
+        font-size: 28px;
+    }
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .nombre {
+        font-size: 24px;
+    }
+
+    .nombre-cv {
+        padding: 15px;
+    }
+
+    .profile-pic {
+        width: 100px;
+    }
+}
+
+/* Pie de Página */
+.footer-cv {
+    background-color: var(--color-fondo);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1rem;
+    border-top: 1px solid var(--separador);
+    color: var(--color-texto);
+    animation: fadeInUp 1.5s ease;
+}
+
+.footer-cv h2 {
+    color: var(--color-acento);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-cv p {
+    margin: 5px 0;
+    color: var(--color-texto);
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Configura la animación de desvanecimiento */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer-cv {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-texto);
+    border-top: 1px solid var(--separador);
+    animation: fadeInUp 1.5s ease;
+}
+
+.footer-cv h2 {
+    color: var(--color-acento);
+    font-size: 1.6rem;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.footer-cv p {
+    margin: 5px 0;
+    color: var(--color-encabezado);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#habilidades-en-desarrollo {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#habilidades-en-desarrollo h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.habilidades-desarrollo-lista {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.habilidades-desarrollo-lista li {
+    margin-bottom: 8px;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Posición inicial */
+}
+
+.fade-in {
+    animation: fadeInEffect 0.5s ease-in-out forwards; /* Aplica transición al aparecer */
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Inicia desde más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Llega a su posición normal */
+    }
+}
