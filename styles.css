@@ -6,6 +6,9 @@
     --color-acento: #0055a5;
     --color-enlace: #0073e6;
     --color-hover: #003a70;
+    --sombra-primaria: rgba(0, 0, 0, 0.15); /* Sombras uniformes */
+    --color-sombra: rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    --borde-general: 8px; /* Radio de bordes */
 }
 
 /* Asegura que las partículas cubran toda la pantalla pero no interfieran con el contenido */
@@ -45,6 +48,19 @@ body {
     justify-content: space-between;
     gap: 20px;
     padding: 30px;
+}
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+        max-width: 100%;
+    }
 }
 
 /* Estilo para el cuadro del nombre */
