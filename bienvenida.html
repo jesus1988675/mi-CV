@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Bienvenida</title>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="bienvenida.css">
+</head>
+
+<body>
+    <!-- Pantalla de bienvenida -->
+    <div id="welcome-screen">
+        <!-- Contenido de bienvenida -->
+        <div class="welcome-content">
+            <h1>¡Bienvenido a mi Portafolio!</h1>
+            <p>Explora mi experiencia y proyectos destacados en ingeniería en sistemas.</p>
+            <button class="neumorphic-button" onclick="redirectToCV()">Explorar mi CV</button>
+        </div>
+
+        <!-- Animación Lottie -->
+        <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"
+            background="transparent" speed="1" loop autoplay></dotlottie-player>
+    </div>
+
+
+
+    <script>
+        function redirectToCV() {
+            // Agregar animación de salida
+            const welcomeScreen = document.getElementById('welcome-screen');
+            welcomeScreen.style.animation = 'fadeOutEffect 1s ease-in-out';
+    
+            // Redirigir después de la animación
+            setTimeout(() => {
+                window.location.href = 'cv.html';
+            }, 1000); // Tiempo sincronizado con la duración de la animación
+        }
+    </script>
+    
+</body>
+
+</html>
