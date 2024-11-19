@@ -47,4 +47,10 @@ fadeInOnScroll(); // Llama a la función una vez en la carga inicial
 function enterSite() {
     window.location.href = "bienvenida.html"; // Cambia "index.html" al nombre de tu archivo principal
 }
+// Detectar cambios en el contenido
+const version = '1.0.1'; // Cambia manualmente en cada actualización
+if (localStorage.getItem('siteVersion') !== version) {
+    localStorage.setItem('siteVersion', version);
+    location.reload(true); // Recargar con la última versión
+}
 
