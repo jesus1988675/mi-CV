@@ -430,9 +430,9 @@ button {
     background: #e0e5ec;
     border-radius: 12px;
     border: none;
-    padding: 1px 3px;
+    padding: 0.5em 0.1em; /* Escalable según la pantalla */
     margin: 10px;
-    font-size: 18px;
+    font-size: 0.8rem; /* Usar rem en lugar de px */
     color: #333;
     font-weight: 400;
     text-transform: uppercase;
