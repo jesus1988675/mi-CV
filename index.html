@@ -12,10 +12,25 @@
 <body>
     <!-- Pantalla de bienvenida -->
     <div id="welcome-screen">
+        <!-- Selector de idioma -->
+        <div id="language-selector">
+            <button onclick="changeLanguage('es')">Español</button>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('fr')">Francés</button>
+            <button onclick="changeLanguage('de')">Alemán</button>
+            <button onclick="changeLanguage('it')">Italiano</button>
+            <button onclick="changeLanguage('pt')">Portugués</button>
+            <button onclick="changeLanguage('nl')">Neerlandés</button>
+            <button onclick="changeLanguage('ru')">Ruso</button>
+            <button onclick="changeLanguage('ja')">Japonés</button>
+            <button onclick="changeLanguage('zh')">Chino</button>
+            <button onclick="changeLanguage('ar')">Árabe</button>
+        </div>
+
         <!-- Contenido de bienvenida -->
         <div class="welcome-content">
-            <h1>¡Bienvenido a mi Portafolio!</h1>
-            <p>Explora mi experiencia y proyectos destacados en ingeniería en sistemas.</p>
+            <h1 id="welcome-title">¡Bienvenido a mi Portafolio!</h1>
+            <p id="welcome-text">Explora mi experiencia y proyectos destacados en ingeniería en sistemas.</p>
             <button class="neumorphic-button" onclick="redirectToCV()">Explorar mi CV</button>
         </div>
 
@@ -24,21 +39,74 @@
             background="transparent" speed="1" loop autoplay></dotlottie-player>
     </div>
 
-
-
     <script>
+        // Función para cambiar el idioma y actualizar el contenido dinámicamente
+        function changeLanguage(language) {
+            // Guardar el idioma en localStorage para usarlo después
+            localStorage.setItem('language', language);
+
+            // Cambiar el contenido en la página
+            const welcomeTitle = document.getElementById('welcome-title');
+            const welcomeText = document.getElementById('welcome-text');
+
+            if (language === 'es') {
+                welcomeTitle.textContent = '¡Bienvenido a mi Portafolio!';
+                welcomeText.textContent = 'Explora mi experiencia y proyectos destacados en ingeniería en sistemas.';
+            } else if (language === 'en') {
+                welcomeTitle.textContent = 'Welcome to my Portfolio!';
+                welcomeText.textContent = 'Explore my experience and highlighted projects in systems engineering.';
+            } else if (language === 'fr') {
+                welcomeTitle.textContent = 'Bienvenue sur mon Portfolio!';
+                welcomeText.textContent = 'Explorez mon expérience et mes projets phares en ingénierie des systèmes.';
+            } else if (language === 'de') {
+                welcomeTitle.textContent = 'Willkommen in meinem Portfolio!';
+                welcomeText.textContent = 'Erkunden Sie meine Erfahrung und hervorgehobene Projekte in der Systemtechnik.';
+            } else if (language === 'it') {
+                welcomeTitle.textContent = 'Benvenuto nel mio Portfolio!';
+                welcomeText.textContent = 'Esplora la mia esperienza e i progetti evidenziati nell\'ingegneria dei sistemi.';
+            } else if (language === 'pt') {
+                welcomeTitle.textContent = 'Bem-vindo ao meu Portfólio!';
+                welcomeText.textContent = 'Explore minha experiência e projetos destacados em engenharia de sistemas.';
+            } else if (language === 'nl') {
+                welcomeTitle.textContent = 'Welkom op mijn Portfolio!';
+                welcomeText.textContent = 'Ontdek mijn ervaring en uitgelichte projecten in systeemtechniek.';
+            } else if (language === 'ru') {
+                welcomeTitle.textContent = 'Добро пожаловать в мое портфолио!';
+                welcomeText.textContent = 'Изучите мой опыт и выделенные проекты в области системной инженерии.';
+            } else if (language === 'ja') {
+                welcomeTitle.textContent = '私のポートフォリオへようこそ！';
+                welcomeText.textContent = 'システムエンジニアリングの経験とハイライトされたプロジェクトを探索してください。';
+            } else if (language === 'zh') {
+                welcomeTitle.textContent = '欢迎来到我的作品集！';
+                welcomeText.textContent = '探索我在系统工程方面的经验和突出项目。';
+            } else if (language === 'ar') {
+                welcomeTitle.textContent = 'مرحباً بكم في محفظتي!';
+                welcomeText.textContent = 'استعرض خبرتي ومشاريعي البارزة في هندسة النظم.';
+            }
+
+
+            // Cambiar el idioma de la página sin recargar
+            document.documentElement.lang = language; // Establece el atributo lang de HTML
+        }
+
+        // Llamada a la función para cargar el idioma almacenado
+        document.addEventListener('DOMContentLoaded', function () {
+            const storedLanguage = localStorage.getItem('language') || 'es'; // Establece 'es' como valor predeterminado
+            changeLanguage(storedLanguage); // Aplica el idioma al cargar la página
+        });
+
+        // Función de redirección al CV
         function redirectToCV() {
             // Agregar animación de salida
             const welcomeScreen = document.getElementById('welcome-screen');
             welcomeScreen.style.animation = 'fadeOutEffect 1s ease-in-out';
-    
-            // Redirigir después de la animación
+
+            // Redirigir a la página del CV (sin pasar parámetro de idioma en la URL)
             setTimeout(() => {
-                window.location.href = 'cv.html';
+                window.location.href = 'cv.html'; // Redirige a la página del CV
             }, 1000); // Tiempo sincronizado con la duración de la animación
         }
     </script>
-    
 </body>
 
 </html>

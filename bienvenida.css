@@ -286,3 +286,44 @@ dotlottie-player {
         padding: 6px 10px;
     }
 }
+button {
+    background: #e0e5ec;
+    border-radius: 12px;
+    border: none;
+    padding: 1px 3px;
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 8px 8px 20px #a3b1c6, -8px -8px 20px #ffffff;
+    transform: translateY(-3px);
+}
+
+button:active {
+    box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
+    transform: translateY(2px);
+}
+@media (max-width: 768px) {
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 100%; /* Makes buttons take the full width on small screens */
+        max-width: none; /* Removes the max-width constraint */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
