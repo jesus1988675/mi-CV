@@ -13,21 +13,22 @@
     <div id="particles"></div>
     <!-- Pantalla de bienvenida -->
     <div id="welcome-screen">
-        <!-- Selector de idioma -->
-        <div id="language-selector">
-            <button onclick="changeLanguage('es')">Español</button>
-            <button onclick="changeLanguage('en')">English</button>
-            <button onclick="changeLanguage('fr')">Francés</button>
-            <button onclick="changeLanguage('de')">Alemán</button>
-            <button onclick="changeLanguage('it')">Italiano</button>
-            <button onclick="changeLanguage('pt')">Portugués</button>
-            <button onclick="changeLanguage('nl')">Neerlandés</button>
-            <button onclick="changeLanguage('ru')">Ruso</button>
-            <button onclick="changeLanguage('ja')">Japonés</button>
-            <button onclick="changeLanguage('zh')">Chino</button>
-            <button onclick="changeLanguage('ar')">Árabe</button>
+        <div class="welcome-content">
+            <!-- Selector de idioma -->
+            <div id="language-selector">
+                <button onclick="changeLanguage('es')">Español</button>
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('fr')">Francés</button>
+                <button onclick="changeLanguage('de')">Alemán</button>
+                <button onclick="changeLanguage('it')">Italiano</button>
+                <button onclick="changeLanguage('pt')">Portugués</button>
+                <button onclick="changeLanguage('nl')">Neerlandés</button>
+                <button onclick="changeLanguage('ru')">Ruso</button>
+                <button onclick="changeLanguage('ja')">Japonés</button>
+                <button onclick="changeLanguage('zh')">Chino</button>
+                <button onclick="changeLanguage('ar')">Árabe</button>
+            </div>
         </div>
-
         <!-- Contenido de bienvenida -->
         <div class="welcome-content">
             <h1 id="welcome-title">¡Bienvenido a mi Portafolio!</h1>
@@ -108,7 +109,7 @@
             }, 1000); // Tiempo sincronizado con la duración de la animación
         }
     </script>
-     <script src="Bienvenida.js"></script>
+    <script src="Bienvenida.js"></script>
 </body>
 
 </html>
