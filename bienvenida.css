@@ -316,50 +316,147 @@ dotlottie-player {
         padding: 6px 10px;
     }
 }
-button {
-    background: #e0e5ec;
-    border-radius: 12px;
+/* Contenedor del menú desplegable */
+#language-dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botón principal */
+#language-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    padding: 0.5em 0.1em; /* Escalable según la pantalla */
-    margin: 10px;
-    font-size: 0.8rem; /* Usar rem en lugar de px */
-    color: #333;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    outline: none;
-    z-index: 1; /* Asegúrate de que el z-index no los oculte */
-
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
-    box-shadow: 8px 8px 20px #a3b1c6, -8px -8px 20px #ffffff;
-    transform: translateY(-3px);
-    z-index: 1; /* Asegúrate de que el z-index no los oculte */
-
+#language-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
-    box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
-    transform: translateY(2px);
-    z-index: 1; /* Asegúrate de que el z-index no los oculte */
-
+/* Opciones del menú desplegable */
+#language-options {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
 }
+
+#language-options button {
+    background: none;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#language-options button:hover {
+    background-color: #ddd;
+}
+
+#language-dropdown:hover #language-options {
+    display: block; /* Mostrar al pasar el cursor */
+}
+
+/* Adaptabilidad */
 @media (max-width: 768px) {
-    button {
+    #language-button {
         font-size: 14px;
-        padding: 10px 20px;
-        width: 100%; /* Makes buttons take the full width on small screens */
-        max-width: none; /* Removes the max-width constraint */
+        padding: 8px 16px;
+    }
+    
+    #language-options button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #ffffff; /* Fondo claro inicial */
+    color: #000000; /* Texto negro inicial */
+}
 
-@media (max-width: 480px) {
-    button {
-        font-size: 12px;
-        padding: 8px 15px;
+#content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del botón */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#toggle-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffcc00; /* Color del botón claro */
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+
+/* Modo oscuro */
+body.dark {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark #toggle-btn {
+    background-color: #444444; /* Botón oscuro */
+}
+/* Modo oscuro: cambia el color de las partículas */
+body.dark #particles .particle {
+    background-color: rgba(255, 255, 255, 0.3); /* Color de las partículas en el modo oscuro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra más clara en el modo oscuro */
+}
+
+/* Animación para las partículas */
+@keyframes float {
+    0% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+body.dark .welcome-content p {
+    color: var(--color-texto-oscuro); /* Color del texto en tema oscuro */
+    border-right: 4px solid var(--color-acento-oscuro); /* Cambiar color del borde en el tema oscuro */
+}
+body.dark .neumorphic-button {
+    background-color: var(--color-fondo-oscuro); /* Fondo oscuro para el tema oscuro */
+    color: var(--color-texto-oscuro); /* Texto en color claro en el tema oscuro */
+    box-shadow: 8px 8px 15px rgba(37, 37, 37, 0.3), -8px -8px 15px rgba(73, 72, 72, 0.3); /* Sombras más oscuras en modo oscuro */
 }

@@ -20,5 +20,26 @@ function generateParticles() {
     }
 }
 
+function toggleTheme() {
+    // Cambia entre las clases 'dark' y 'light'
+    document.body.classList.toggle('dark');
+
+    // Cambia el ícono del botón según el tema
+    const button = document.getElementById('toggle-btn');
+    if (document.body.classList.contains('dark')) {
+        button.textContent = '🌙'; // Ícono para el modo oscuro
+    } else {
+        button.textContent = '💡'; // Ícono para el modo claro
+    }
+
+    // Animar las columnas al cambiar de tema
+    const content = document.getElementById('content');
+    content.style.transform = 'scale(0.98)'; // Reducción ligera para animación
+    setTimeout(() => {
+        content.style.transform = 'scale(1)'; // Volver al tamaño original
+    }, 500);
+}
+
+
 // Generar partículas al cargar la página
 window.onload = generateParticles;

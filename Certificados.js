@@ -54,3 +54,15 @@ if (localStorage.getItem('siteVersion') !== version) {
     location.reload(true); // Recargar con la última versión
 }
 
+function toggleTheme() {
+    // Cambia entre las clases 'dark' y 'light'
+    document.body.classList.toggle('dark');
+
+    // Cambia el ícono del botón según el tema
+    const button = document.getElementById('toggle-btn');
+    if (document.body.classList.contains('dark')) {
+        button.textContent = '🌙'; // Ícono para el modo oscuro
+    } else {
+        button.textContent = '💡'; // Ícono para el modo claro
+    }
+}

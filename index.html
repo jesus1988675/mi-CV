@@ -15,30 +15,37 @@
     <div id="welcome-screen">
         <div class="welcome-content">
             <!-- Selector de idioma -->
-            <div id="language-selector">
-                <button onclick="changeLanguage('es')">Español</button>
-                <button onclick="changeLanguage('en')">English</button>
-                <button onclick="changeLanguage('fr')">Francés</button>
-                <button onclick="changeLanguage('de')">Alemán</button>
-                <button onclick="changeLanguage('it')">Italiano</button>
-                <button onclick="changeLanguage('pt')">Portugués</button>
-                <button onclick="changeLanguage('nl')">Neerlandés</button>
-                <button onclick="changeLanguage('ru')">Ruso</button>
-                <button onclick="changeLanguage('ja')">Japonés</button>
-                <button onclick="changeLanguage('zh')">Chino</button>
-                <button onclick="changeLanguage('ar')">Árabe</button>
+            <div id="language-dropdown">
+                <button id="language-button">Seleccionar Idioma</button>
+                <div id="language-options">
+                    <button onclick="changeLanguage('es')">Español</button>
+                    <button onclick="changeLanguage('en')">English</button>
+                    <button onclick="changeLanguage('fr')">Français</button>
+                    <button onclick="changeLanguage('de')">Deutsch</button>
+                    <button onclick="changeLanguage('it')">Italiano</button>
+                    <button onclick="changeLanguage('pt')">Português</button>
+                    <button onclick="changeLanguage('nl')">Nederlands</button>
+                    <button onclick="changeLanguage('ru')">Русский</button>
+                    <button onclick="changeLanguage('ja')">日本語</button>
+                    <button onclick="changeLanguage('zh')">中文</button>
+                    <button onclick="changeLanguage('ar')">العربية</button>
+                </div>
             </div>
         </div>
-        <!-- Contenido de bienvenida -->
-        <div class="welcome-content">
-            <h1 id="welcome-title">¡Bienvenido a mi Portafolio!</h1>
-            <p id="welcome-text">Explora mi experiencia y proyectos destacados en ingeniería en sistemas.</p>
-            <button class="neumorphic-button" onclick="redirectToCV()">Explorar mi CV</button>
-        </div>
+    </div>
+    <div id="theme-toggle">
+        <button id="toggle-btn" onclick="toggleTheme()">💡</button>
+    </div>
+    <!-- Contenido de bienvenida -->
+    <div class="welcome-content">
+        <h1 id="welcome-title">¡Bienvenido a mi Portafolio!</h1>
+        <p id="welcome-text">Explora mi experiencia y proyectos destacados en ingeniería en sistemas.</p>
+        <button class="neumorphic-button" onclick="redirectToCV()">Explorar mi CV</button>
+    </div>
 
-        <!-- Animación Lottie -->
-        <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"
-            background="transparent" speed="1" loop autoplay></dotlottie-player>
+    <!-- Animación Lottie -->
+    <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"
+        background="transparent" speed="1" loop autoplay></dotlottie-player>
     </div>
 
     <script>

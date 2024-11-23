@@ -426,44 +426,213 @@ progress::-webkit-progress-value {
         transform: translateY(0); /* Llega a su posición normal */
     }
 }
-button {
-    background: #e0e5ec;
-    border-radius: 12px;
+/* Contenedor del menú desplegable */
+#language-dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botón principal */
+#language-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    padding: 0.5em 0.1em; /* Escalable según la pantalla */
-    margin: 10px;
-    font-size: 0.8rem; /* Usar rem en lugar de px */
-    color: #333;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
-    box-shadow: 8px 8px 20px #a3b1c6, -8px -8px 20px #ffffff;
-    transform: translateY(-3px);
+#language-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
-    box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
-    transform: translateY(2px);
+/* Opciones del menú desplegable */
+#language-options {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
 }
+
+#language-options button {
+    background: none;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#language-options button:hover {
+    background-color: #ddd;
+}
+
+#language-dropdown:hover #language-options {
+    display: block; /* Mostrar al pasar el cursor */
+}
+
+/* Adaptabilidad */
 @media (max-width: 768px) {
-    button {
+    #language-button {
         font-size: 14px;
-        padding: 10px 20px;
-        width: 100%; /* Makes buttons take the full width on small screens */
-        max-width: none; /* Removes the max-width constraint */
+        padding: 8px 16px;
+    }
+    
+    #language-options button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #ffffff; /* Fondo claro inicial */
+    color: #000000; /* Texto negro inicial */
+}
 
-@media (max-width: 480px) {
-    button {
-        font-size: 12px;
-        padding: 8px 15px;
-    }
+#content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del botón */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#toggle-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffcc00; /* Color del botón claro */
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+
+/* Modo oscuro */
+body.dark {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark #toggle-btn {
+    background-color: #444444; /* Botón oscuro */
+}
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #ffffff; /* Fondo claro inicial */
+    color: #000000; /* Texto negro inicial */
+}
+
+#content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del botón */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#toggle-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff; /* Color del botón claro */
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Modo oscuro */
+body.dark {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark #toggle-btn {
+    background-color: #444444; /* Botón oscuro */
+}
+/* Modo oscuro */
+body.dark {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark #toggle-btn {
+    background-color: #444444; /* Botón oscuro */
+}
+
+body.dark .column {
+    background-color: #333333; /* Fondo de las columnas en oscuro */
+    color: #dddddd; /* Texto de las columnas en oscuro */
+}
+
+body.dark #content {
+    transform: scale(1.02); /* Animación ligera al cambiar tema */
+    opacity: 0.95;
+}
+body.dark .profile-container {
+    background: #333333; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+/* Estilo en modo oscuro */
+body.dark #habilidades-en-desarrollo {
+    background-color: #2c2c2c; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+/* Modo oscuro */
+body.dark .footer-cv {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #f0f0f0; /* Texto claro */
+    border-top: 1px solid #333; /* Separador más tenue */
+}
+/* Modo oscuro: estilos específicos para h2 y p */
+body.dark .footer-cv h2 {
+    color: #ffcc00; /* Un color acento diferente para destacar */
+}
+
+body.dark .footer-cv p {
+    color: #cccccc; /* Texto ligeramente más claro para el modo oscuro */
 }
