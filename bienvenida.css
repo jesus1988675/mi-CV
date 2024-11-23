@@ -460,3 +460,41 @@ body.dark .neumorphic-button {
     color: var(--color-texto-oscuro); /* Texto en color claro en el tema oscuro */
     box-shadow: 8px 8px 15px rgba(37, 37, 37, 0.3), -8px -8px 15px rgba(73, 72, 72, 0.3); /* Sombras más oscuras en modo oscuro */
 }
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .welcome-content p {
+        font-size: 1.2em; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+        margin: 8px 0; /* Reducir márgenes para un mejor ajuste */
+    }
+
+    /* Para los botones de selección de idioma */
+    #language-selector button {
+        font-size: 1rem; /* Reducir tamaño de los botones */
+        padding: 10px; /* Ajustar el padding para mayor clicabilidad */
+        margin: 5px; /* Añadir espacio entre los botones */
+    }
+
+    /* Ajuste de animación de typing */
+    .welcome-content p {
+        animation: typing 3s steps(20) 1s normal both; /* Reducción de pasos y tiempo en móviles */
+    }
+}
+
+/* Estilo para el tema oscuro en móviles */
+body.dark .welcome-content p {
+    color: var(--color-texto-oscuro);
+    border-right: 4px solid var(--color-acento-oscuro);
+}
+
+/* Ajustes generales de contenedores en dispositivos pequeños */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px; /* Reducir el padding para pantallas pequeñas */
+    }
+
+    /* Cambiar el tamaño de la sombra para que no se vea muy grande en dispositivos pequeños */
+    .profile-container {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
