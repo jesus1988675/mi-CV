@@ -15,17 +15,17 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    block-size: 100%;
     overflow: auto; /* Permite el desplazamiento */
 }
 
 /* Fondo de partículas */
 #particles-js {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
     z-index: -1;
     background: none;
 }
@@ -52,14 +52,14 @@ body {
 @media (max-width: 768px) {
     .column {
         flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
-        max-width: calc(50% - 20px);
+        max-inline-size: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .column {
         flex: 1 1 100%; /* Una columna en pantallas pequeñas */
-        max-width: 100%;
+        max-inline-size: 100%;
     }
 }
 
@@ -87,8 +87,8 @@ body {
     box-shadow: 0 5px 15px var(--color-sombra);
     padding: 20px;
     flex: 1;
-    max-width: 32%;
-    text-align: left;
+    max-inline-size: 32%;
+    text-align: start;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     position: relative;
 }
@@ -124,14 +124,14 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     color: var(--color-encabezado);
-    margin-bottom: 5px; /* Reduce el espacio debajo del nombre */
+    margin-block-end: 5px; /* Reduce el espacio debajo del nombre */
 }
 
 .profile-pic {
     display: block; /* Asegura que la imagen se trate como bloque */
     margin: 0 auto; /* Centra horizontalmente la imagen */
-    width: 200px; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Mantén la proporción de la imagen */
+    inline-size: 200px; /* Ajusta el tamaño según sea necesario */
+    block-size: auto; /* Mantén la proporción de la imagen */
     object-fit: cover; /* Asegura que la imagen no se distorsione */
     border-radius: 8px; /* Da bordes suaves */
     filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
@@ -146,7 +146,7 @@ body {
 
 /* Estilo para las secciones de experiencia y proyectos */
 article {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
 }
 
 @media (max-width: 480px) {
@@ -172,11 +172,11 @@ article {
 }
 
 .certificado-img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+    inline-size: 100%;
+    max-inline-size: 200px;
+    block-size: auto;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }
 
 /* Estilos para las barras de habilidad */
@@ -184,13 +184,13 @@ article {
 .habilidad {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-block-end: 15px;
 }
 
 .habilidad i {
     font-size: 20px;
     color: #555;
-    margin-right: 10px;
+    margin-inline-end: 10px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -201,14 +201,14 @@ article {
 
 .habilidad label {
     font-weight: bold;
-    margin-right: 10px;
+    margin-inline-end: 10px;
     flex-shrink: 0; /* Evita que el label se reduzca */
 }
 progress {
     flex-grow: 1;
     appearance: none;
-    width: 100%;
-    height: 10px;
+    inline-size: 100%;
+    block-size: 10px;
     border-radius: 5px;
     background-color: #e0e0e0;
     overflow: hidden;
@@ -225,7 +225,7 @@ progress::-webkit-progress-value {
 
 /* QR */
 #qr-container {
-    margin-top: 15px;
+    margin-block-start: 15px;
     padding: 10px;
     border: 1px solid var(--separador);
     border-radius: 5px;
@@ -244,7 +244,7 @@ progress::-webkit-progress-value {
     }
 
     .column {
-        max-width: 100%;
+        max-inline-size: 100%;
     }
 
     .nombre {
@@ -267,7 +267,7 @@ progress::-webkit-progress-value {
     }
 
     .profile-pic {
-        width: 100px;
+        inline-size: 100px;
     }
 }
 
@@ -277,7 +277,7 @@ progress::-webkit-progress-value {
     text-align: center;
     padding: 30px 20px;
     font-size: 1rem;
-    border-top: 1px solid var(--separador);
+    border-block-start: 1px solid var(--separador);
     color: var(--color-texto);
     animation: fadeInUp 1.5s ease;
 }
@@ -298,10 +298,10 @@ progress::-webkit-progress-value {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -311,8 +311,8 @@ progress::-webkit-progress-value {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+    inline-size: 80%;
+    max-inline-size: 600px;
     border-radius: 8px;
     text-align: center;
 }
@@ -328,7 +328,7 @@ progress::-webkit-progress-value {
 }
 .close-btn {
     color: #aaa;
-    float: right;
+    float: inline-end;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -357,7 +357,7 @@ progress::-webkit-progress-value {
     font-size: 1rem;
     text-align: center;
     color: var(--color-texto);
-    border-top: 1px solid var(--separador);
+    border-block-start: 1px solid var(--separador);
     animation: fadeInUp 1.5s ease;
 }
 
@@ -384,7 +384,7 @@ progress::-webkit-progress-value {
     }
 }
 #habilidades-en-desarrollo {
-    margin-top: 20px;
+    margin-block-start: 20px;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -393,19 +393,19 @@ progress::-webkit-progress-value {
 
 #habilidades-en-desarrollo h2 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-block-end: 10px;
     color: #333;
 }
 
 .habilidades-desarrollo-lista {
     list-style: none;
-    padding-left: 0;
+    padding-inline-start: 0;
     font-size: 1em;
     color: #555;
 }
 
 .habilidades-desarrollo-lista li {
-    margin-bottom: 8px;
+    margin-block-end: 8px;
 }
 .hidden {
     opacity: 0;
@@ -431,7 +431,7 @@ progress::-webkit-progress-value {
     position: relative;
     display: inline-block;
     text-align: center;
-    margin-top: 20px;
+    margin-block-start: 20px;
 }
 
 /* Botón principal */
@@ -456,7 +456,7 @@ progress::-webkit-progress-value {
     display: none; /* Inicialmente oculto */
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-inline-size: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     z-index: 1;
@@ -468,8 +468,8 @@ progress::-webkit-progress-value {
     border: none;
     color: black;
     padding: 10px;
-    text-align: left;
-    width: 100%;
+    text-align: start;
+    inline-size: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -511,14 +511,14 @@ body {
 /* Estilos del botón */
 #theme-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
     z-index: 1000;
 }
 
 #toggle-btn {
-    width: 50px;
-    height: 50px;
+    inline-size: 50px;
+    block-size: 50px;
     border: none;
     border-radius: 50%;
     background-color: #ffcc00; /* Color del botón claro */
@@ -560,14 +560,14 @@ body {
 /* Estilos del botón */
 #theme-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
     z-index: 1000;
 }
 
 #toggle-btn {
-    width: 50px;
-    height: 50px;
+    inline-size: 50px;
+    block-size: 50px;
     border: none;
     border-radius: 50%;
     background-color: #ffffff; /* Color del botón claro */
@@ -626,7 +626,7 @@ body.dark #habilidades-en-desarrollo {
 body.dark .footer-cv {
     background-color: #1a1a1a; /* Fondo oscuro */
     color: #f0f0f0; /* Texto claro */
-    border-top: 1px solid #333; /* Separador más tenue */
+    border-block-start: 1px solid #333; /* Separador más tenue */
 }
 /* Modo oscuro: estilos específicos para h2 y p */
 body.dark .footer-cv h2 {
