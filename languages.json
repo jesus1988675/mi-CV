@@ -70,7 +70,10 @@
         "English": "English",
         "Work": "Work",
         "Art": "Art",
-        "Family": "Family"
+        "Family": "Family",
+        "welcomeTitle": "Welcome to my Portfolio!",
+        "welcomeText": "Explore my experience and highlighted projects in systems engineering.",
+        "exploreCV": "Explore my CV"
     },
     "es": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -143,7 +146,10 @@
         "English": "Inglés",
         "Work": "Trabajo",
         "Art": "Arte",
-        "Family": "Familia"
+        "Family": "Familia",
+        "welcomeTitle": "¡Bienvenido a mi Portafolio!",
+        "welcomeText": "Explora mi experiencia y proyectos destacados en ingeniería en sistemas.",
+        "exploreCV": "Explorar mi CV"
     },
     "fr": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -216,7 +222,10 @@
         "English": "Anglais",
         "Work": "Travail",
         "Art": "Art",
-        "Family": "Famille"
+        "Family": "Famille",
+        "welcomeTitle": "Bienvenue sur mon Portfolio!",
+        "welcomeText": "Explorez mon expérience et mes projets phares en ingénierie des systèmes.",
+        "exploreCV": "Explorer mon CV"
     },
     "de": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -289,7 +298,10 @@
         "English": "Englisch",
         "Work": "Arbeit",
         "Art": "Kunst",
-        "Family": "Familie"
+        "Family": "Familie",
+        "welcomeTitle": "Willkommen in meinem Portfolio!",
+        "welcomeText": "Erkunden Sie meine Erfahrung und hervorgehobene Projekte in der Systemtechnik.",
+        "exploreCV": "Erkunde meinen Lebenslauf"
     },
     "it": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -362,7 +374,10 @@
         "English": "Inglese",
         "Work": "Lavoro",
         "Art": "Arte",
-        "Family": "Famiglia"
+        "Family": "Famiglia",
+        "welcomeTitle": "Benvenuto nel mio Portfolio!",
+        "welcomeText": "Esplora la mia esperienza e i progetti evidenziati nell'ingegneria dei sistemi.",
+        "exploreCV": "Esplora il mio CV"
     },
     "pt": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -435,7 +450,10 @@
         "English": "Inglês",
         "Work": "Trabalho",
         "Art": "Arte",
-        "Family": "Família"
+        "Family": "Família",
+        "welcomeTitle": "Bem-vindo ao meu Portfólio!",
+        "welcomeText": "Explore minha experiência e projetos destacados em engenharia de sistemas.",
+        "exploreCV": "Explore meu CV"
     },
     "nl": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -508,7 +526,10 @@
         "English": "Engels",
         "Work": "Werk",
         "Art": "Kunst",
-        "Family": "Familie"
+        "Family": "Familie",
+        "welcomeTitle": "Welkom op mijn Portfolio!",
+        "welcomeText": "Ontdek mijn ervaring en uitgelichte projecten in systeemtechniek.",
+        "exploreCV": "Bekijk mijn CV"
     },
     "ru": {
         "nombre": "Хесус Адриан Молина Эрнандес",
@@ -581,7 +602,10 @@
         "English": "Английский",
         "Work": "Работа",
         "Art": "Искусство",
-        "Family": "Семья"
+        "Family": "Семья",
+        "welcomeTitle": "Добро пожаловать в мое портфолио!",
+        "welcomeText": "Изучите мой опыт и выделенные проекты в области системной инженерии.",
+        "exploreCV": "Ознакомьтесь с моим резюме"
     },
     "ja": {
         "nombre": "ヘスス・アドリアン・モリナ・エルナンデス",
@@ -654,7 +678,10 @@
         "English": "英語",
         "Work": "仕事",
         "Art": "アート",
-        "Family": "家族"
+        "Family": "家族",
+        "welcomeTitle": "私のポートフォリオへようこそ！",
+        "welcomeText": "システムエンジニアリングの経験とハイライトされたプロジェクトを探索してください。",
+        "exploreCV": "私の履歴書を探る"
     },
     "zh": {
         "nombre": "赫苏斯·阿德里安·莫利纳·埃尔南德斯",
@@ -727,7 +754,10 @@
         "English": "英语",
         "Work": "工作",
         "Art": "艺术",
-        "Family": "家庭"
+        "Family": "家庭",
+        "welcomeTitle": "欢迎来到我的作品集！",
+        "welcomeText": "探索我在系统工程方面的经验和突出项目。",
+        "exploreCV": "探索我的简历"
     },
     "ar": {
         "nombre": "خيسوس أدريان مولينا إرنانديس",
@@ -800,6 +830,9 @@
         "English": "الإنجليزية",
         "Work": "العمل",
         "Art": "فن",
-        "Family": "عائلة"
+        "Family": "عائلة",
+        "welcomeTitle": "مرحباً بكم في محفظتي!",
+        "welcomeText": "استعرض خبرتي ومشاريعي البارزة في هندسة النظم.",
+        "exploreCV": "استعراض سيرتي الذاتية"
     }
 }

@@ -329,6 +329,14 @@ dotlottie-player {
     display: inline-block;
     text-align: center;
     margin-block-start: 20px;
+    position: absolute;
+    /* Cambiar a absolute para permitir la alineación */
+    inset-block-start: 20px;
+    /* Distancia desde la parte superior */
+    inset-inline-start: -620px;
+    /* Distancia desde el lado izquierdo */
+    z-index: 10;
+    /* Asegúrate de que esté por encima de otros elementos */
 }
 
 /* Botón principal */
@@ -340,8 +348,8 @@ dotlottie-player {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-    
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 #language-button:hover {
@@ -375,11 +383,6 @@ dotlottie-player {
 
 #language-options button:hover {
     background-color: #ddd;
-}
-
-#language-dropdown:hover #language-options {
-    display: block;
-    /* Mostrar al pasar el cursor */
 }
 
 /* Adaptabilidad */
