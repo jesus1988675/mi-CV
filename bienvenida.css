@@ -14,7 +14,8 @@
 body {
     margin: 0;
     padding: 0;
-    position: relative; /* Esto asegura que los hijos absolutos puedan ubicarse en relación a la pantalla */
+    position: relative;
+    /* Esto asegura que los hijos absolutos puedan ubicarse en relación a la pantalla */
     font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     /* Tipografía moderna */
     background-color: var(--color-fondo);
@@ -25,6 +26,7 @@ body {
     align-items: center;
     flex-direction: column;
     overflow: hidden;
+    line-height: 1.6;
 }
 
 /* Fondo de partículas */
@@ -47,9 +49,11 @@ body {
     0% {
         transform: translateY(0) translateX(0);
     }
+
     50% {
         transform: translateY(-50px) translateX(20px);
     }
+
     100% {
         transform: translateY(0) translateX(0);
     }
@@ -61,8 +65,10 @@ body {
     text-align: center;
     position: relative;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
     padding: 20px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
@@ -70,11 +76,11 @@ body {
 
 /* Animación de Lottie */
 dotlottie-player {
-    margin-block-start: 20px;
-    inline-size: 300px;
-    block-size: 300px;
-    max-inline-size: 100%;
-    animation: fadeInLottie 2s ease-out forwards;
+    width: 100%;
+    max-width: 400px;
+    /* Limita el tamaño de la animación en pantallas grandes */
+    height: auto;
+    margin-top: 20px;
 }
 
 /* Animación de entrada de Lottie */
@@ -298,11 +304,23 @@ dotlottie-player {
 
 /* Contenedor del menú desplegable */
 #language-dropdown {
-    position: fixed; /* Fija el botón respecto a la ventana del navegador */
-    top: 10px; /* Margen desde la parte superior */
-    left: 10px; /* Margen desde la parte izquierda */
-    text-align: left; /* Asegura la alineación del texto en el botón */
-    z-index: 1000; /* Garantiza que esté en la capa superior */
+    position: absolute;
+    top: 60px;
+    left: -600px;
+    /* Cambiado de right a left */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    /* Cambié z-index a 10 para asegurarme de que esté encima de otros elementos */
+}
+
+/* Diseño responsivo para asegurar que se vean igual en diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) { /* Para pantallas pequeñas (tabletas y teléfonos) */
+    #language-dropdown {
+        top: 10px;   /* Alineación vertical consistente */
+        left: 10px;  /* Alineación horizontal consistente */
+    }
 }
 
 /* Botón principal */
@@ -314,22 +332,29 @@ dotlottie-player {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
-}
-
-#language-button:hover {
-    background-color: #45a049;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para mejor visibilidad */
 }
 
 /* Opciones del menú desplegable */
 #language-options {
     display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
     position: absolute;
-    background-color: #f9f9f9;
-    min-inline-size: 160px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    top: 40px;
+    left: 0;
+    /* Alineamos las opciones con el botón de idiomas */
+}
+
+#language-dropdown:hover #language-options {
+    display: flex;
+}
+
+#language-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #language-options button {
@@ -346,33 +371,71 @@ dotlottie-player {
     background-color: #ddd;
 }
 
+
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.welcome-content {
+    text-align: center;
+    margin: 20px;
+}
+
+#welcome-title {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+#welcome-text {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
 /* Adaptabilidad */
 @media (max-width: 768px) {
     .welcome-content h1 {
         font-size: 2rem;
     }
+
     .welcome-content p {
         font-size: 1rem;
     }
+
     dotlottie-player {
         inline-size: 200px;
         block-size: 200px;
     }
+
     .neumorphic-button {
         font-size: 0.9rem;
     }
 }
+
 @media (max-width: 480px) {
     .welcome-content h1 {
         font-size: 1.8rem;
     }
+
     .welcome-content p {
         font-size: 0.9rem;
     }
+
     dotlottie-player {
         inline-size: 150px;
         block-size: 150px;
     }
+
     .neumorphic-button {
         font-size: 0.8rem;
         padding: 6px 10px;
