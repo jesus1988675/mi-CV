@@ -107,6 +107,10 @@ dotlottie-player {
     animation: typingH1 3s steps(30) 0.5s 1 normal both, blink 0.75s step-end infinite;
     padding: 20px;
     border-radius: 10px;
+    line-height: 1.4;
+    /* Ajusta la altura de la línea para que no haya tanto espacio */
+    word-wrap: break-word;
+    /* Asegura que el texto largo no se salga de la pantalla */
 }
 
 .welcome-content p {
@@ -122,6 +126,10 @@ dotlottie-player {
     animation: typingP 3s steps(30) 3.5s 1 normal both, blink 0.75s step-end infinite;
     padding: 20px;
     border-radius: 10px;
+    line-height: 1.4;
+    /* Ajusta la altura de la línea para que no haya tanto espacio */
+    word-wrap: break-word;
+    /* Asegura que el texto largo no se salga de la pantalla */
 }
 
 /* Animación de la máquina de escribir */
@@ -270,41 +278,51 @@ dotlottie-player {
     }
 
     dotlottie-player {
-        width: 90%; /* Ajusta al 90% del ancho de la pantalla */
-        height: auto; /* Mantiene la proporción */
+        width: 90%;
+        /* Ajusta al 90% del ancho de la pantalla */
+        height: auto;
+        /* Mantiene la proporción */
     }
 }
 
-/* Ajustes para pantallas pequeñas (hasta 480px de ancho) */
+/* Ajustes específicos para dispositivos pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .welcome-content h1 {
-        font-size: 2em; /* Ajusta el tamaño del título */
+        font-size: 1.8em;
+        /* Ajusta el tamaño del título para pantallas pequeñas */
+        line-height: 1.3;
+        /* Reduce el espacio entre líneas del título */
     }
 
     .welcome-content p {
-        font-size: 1.1em; /* Ajusta el tamaño del texto */
+        font-size: 1em;
+        /* Asegura que el texto se ajuste bien */
+        line-height: 1.5;
+        /* Ajusta la altura de la línea del texto */
     }
 
     dotlottie-player {
-        width: 80%; /* Ajusta el tamaño de la animación */
+        width: 80%;
+        /* Asegura que la animación no sea demasiado grande */
         height: auto;
     }
 
     .neumorphic-button {
-        font-size: 1rem; /* Tamaño más accesible para el botón */
+        font-size: 1rem;
+        /* Botón más grande para pantallas pequeñas */
         padding: 8px 12px;
     }
-
-    #welcome-screen {
-        padding: 15px;
-    }
 }
 
-body, html {
-    overflow-x: hidden; /* Evitar desplazamiento horizontal no deseado */
-    overflow-y: auto; /* Habilitar desplazamiento vertical */
+body,
+html {
+    overflow-x: hidden;
+    /* Evitar desplazamiento horizontal no deseado */
+    overflow-y: auto;
+    /* Habilitar desplazamiento vertical */
     height: 100%;
 }
+
 /* Contenedor del menú desplegable */
 #language-dropdown {
     position: fixed;
@@ -319,10 +337,14 @@ body, html {
 }
 
 /* Diseño responsivo para asegurar que se vean igual en diferentes tamaños de pantalla */
-@media screen and (max-width: 768px) { /* Para pantallas pequeñas (tabletas y teléfonos) */
+@media screen and (max-width: 768px) {
+
+    /* Para pantallas pequeñas (tabletas y teléfonos) */
     #language-dropdown {
-        top: 10px;   /* Alineación vertical consistente */
-        left: 10px;  /* Alineación horizontal consistente */
+        top: 10px;
+        /* Alineación vertical consistente */
+        left: 10px;
+        /* Alineación horizontal consistente */
     }
 }
 
@@ -403,46 +425,6 @@ button:hover {
 #welcome-text {
     font-size: 1.2rem;
     margin: 10px 0;
-}
-
-/* Adaptabilidad */
-@media (max-width: 768px) {
-    .welcome-content h1 {
-        font-size: 2rem;
-    }
-
-    .welcome-content p {
-        font-size: 1rem;
-    }
-
-    dotlottie-player {
-        inline-size: 200px;
-        block-size: 200px;
-    }
-
-    .neumorphic-button {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .welcome-content p {
-        font-size: 0.9rem;
-    }
-
-    dotlottie-player {
-        inline-size: 150px;
-        block-size: 150px;
-    }
-
-    .neumorphic-button {
-        font-size: 0.8rem;
-        padding: 6px 10px;
-    }
 }
 
 /* Estilos generales */
