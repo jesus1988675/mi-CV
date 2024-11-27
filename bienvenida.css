@@ -61,7 +61,6 @@ body {
 
 /* Contenedor principal de la pantalla de bienvenida */
 #welcome-screen {
-    max-inline-size: 100%;
     text-align: center;
     position: relative;
     display: flex;
@@ -106,6 +105,8 @@ dotlottie-player {
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
     animation: typingH1 3s steps(30) 0.5s 1 normal both, blink 0.75s step-end infinite;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .welcome-content p {
@@ -119,6 +120,8 @@ dotlottie-player {
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
     animation: typingP 3s steps(30) 3.5s 1 normal both, blink 0.75s step-end infinite;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* Animación de la máquina de escribir */
@@ -250,51 +253,46 @@ dotlottie-player {
     }
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Ajustes para dispositivos de hasta 768px */
 @media (max-width: 768px) {
-    .welcome-content h1 {
-        font-size: 2em;
-        letter-spacing: 1px;
+    #language-dropdown {
+        top: 10px;
+        left: 10px;
     }
 
-    .welcome-content p {
-        font-size: 1.2em;
-        letter-spacing: 0.5px;
-    }
-
-    dotlottie-player {
-        inline-size: 250px;
-        block-size: 250px;
-    }
-
-    .neumorphic-button {
-        font-size: 0.9rem;
-        padding: 8px 15px;
+    .welcome-content {
+        width: 90%;
+        padding: 15px;
     }
 
     #welcome-screen {
-        padding: 20px;
-    }
-}
-
-/* Ajustes para pantallas extra pequeñas (teléfonos) */
-@media (max-width: 480px) {
-    .welcome-content h1 {
-        font-size: 1.8em;
-    }
-
-    .welcome-content p {
-        font-size: 1em;
+        padding: 10px;
     }
 
     dotlottie-player {
-        inline-size: 150px;
-        block-size: 150px;
+        width: 90%; /* Ajusta al 90% del ancho de la pantalla */
+        height: auto; /* Mantiene la proporción */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (hasta 480px de ancho) */
+@media (max-width: 480px) {
+    .welcome-content h1 {
+        font-size: 2em; /* Ajusta el tamaño del título */
+    }
+
+    .welcome-content p {
+        font-size: 1.1em; /* Ajusta el tamaño del texto */
+    }
+
+    dotlottie-player {
+        width: 80%; /* Ajusta el tamaño de la animación */
+        height: auto;
     }
 
     .neumorphic-button {
-        font-size: 0.8rem;
-        padding: 6px 10px;
+        font-size: 1rem; /* Tamaño más accesible para el botón */
+        padding: 8px 12px;
     }
 
     #welcome-screen {
@@ -302,16 +300,21 @@ dotlottie-player {
     }
 }
 
+body, html {
+    overflow-x: hidden; /* Evitar desplazamiento horizontal no deseado */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    height: 100%;
+}
 /* Contenedor del menú desplegable */
 #language-dropdown {
-    position: absolute;
-    top: 60px;
-    left: -600px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
     /* Cambiado de right a left */
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     border-radius: 5px;
-    z-index: 10;
+    z-index: 1000;
     /* Cambié z-index a 10 para asegurarme de que esté encima de otros elementos */
 }
 
