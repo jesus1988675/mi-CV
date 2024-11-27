@@ -96,7 +96,7 @@ dotlottie-player {
 /* Animación para que los textos aparezcan como máquina de escribir */
 .welcome-content h1 {
     margin: 15px 0;
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Ajustable según tamaño de pantalla */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: var(--color-acento);
@@ -105,16 +105,15 @@ dotlottie-player {
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
     animation: typingH1 3s steps(30) 0.5s 1 normal both, blink 0.75s step-end infinite;
-    padding: 20px;
+    padding: 1.2rem; /* Ajuste en rem para mayor flexibilidad */
     border-radius: 10px;
-    line-height: 1.4;
-    /* Ajusta la altura de la línea para que no haya tanto espacio */
-    word-wrap: break-word;
-    /* Asegura que el texto largo no se salga de la pantalla */
+    line-height: 1.2;
+    word-break: break-word; /* Cambié word-wrap por word-break */
 }
 
+/* Animación de máquina de escribir para el párrafo */
 .welcome-content p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Ajustable según tamaño de pantalla */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: var(--color-texto);
@@ -124,12 +123,19 @@ dotlottie-player {
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
     animation: typingP 3s steps(30) 3.5s 1 normal both, blink 0.75s step-end infinite;
-    padding: 20px;
+    padding: 1.2rem; /* Ajuste en rem */
     border-radius: 10px;
-    line-height: 1.4;
-    /* Ajusta la altura de la línea para que no haya tanto espacio */
-    word-wrap: break-word;
-    /* Asegura que el texto largo no se salga de la pantalla */
+    line-height: 1.2;
+    word-break: break-word; /* Cambié word-wrap por word-break */
+}
+@media (max-width: 600px) {
+    .welcome-content h1 {
+        font-size: 2rem; /* Ajuste para pantallas pequeñas */
+    }
+
+    .welcome-content p {
+        font-size: 1rem; /* Ajuste para pantallas pequeñas */
+    }
 }
 
 /* Animación de la máquina de escribir */
