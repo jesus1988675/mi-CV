@@ -1,22 +1,28 @@
 :root {
-    --color-fondo: #ffffff; /* Cambia el fondo principal a blanco */
+    --color-fondo: #ffffff;
+    /* Cambia el fondo principal a blanco */
     --color-encabezado: #333;
     --color-texto: #555;
     --separador: #ddd;
     --color-acento: #0055a5;
     --color-enlace: #0073e6;
     --color-hover: #003a70;
-    --sombra-primaria: rgba(0, 0, 0, 0.15); /* Sombras uniformes */
-    --color-sombra: rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    --borde-general: 8px; /* Radio de bordes */
+    --sombra-primaria: rgba(0, 0, 0, 0.15);
+    /* Sombras uniformes */
+    --color-sombra: rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    --borde-general: 8px;
+    /* Radio de bordes */
 }
 
 /* Asegura que las partículas cubran toda la pantalla pero no interfieran con el contenido */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     block-size: 100%;
-    overflow: auto; /* Permite el desplazamiento */
+    overflow: auto;
+    /* Permite el desplazamiento */
 }
 
 /* Fondo de partículas */
@@ -35,7 +41,8 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-fondo); /* Fondo blanco */
+    background-color: var(--color-fondo);
+    /* Fondo blanco */
     color: var(--color-texto);
     line-height: 1.6;
     font-size: 16px;
@@ -49,16 +56,19 @@ body {
     gap: 20px;
     padding: 30px;
 }
+
 @media (max-width: 768px) {
     .column {
-        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+        flex: 1 1 calc(50% - 20px);
+        /* Dos columnas en pantallas medianas */
         max-inline-size: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .column {
-        flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+        flex: 1 1 100%;
+        /* Una columna en pantallas pequeñas */
         max-inline-size: 100%;
     }
 }
@@ -113,10 +123,14 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px; /* Espaciado alrededor de la imagen */
-    background: #f7f8f8; /* Fondo claro */
-    border-radius: 10px; /* Opcional, si quieres bordes suaves */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    padding: 20px;
+    /* Espaciado alrededor de la imagen */
+    background: #f7f8f8;
+    /* Fondo claro */
+    border-radius: 10px;
+    /* Opcional, si quieres bordes suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra elegante */
 }
 
 
@@ -124,24 +138,36 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     color: var(--color-encabezado);
-    margin-block-end: 5px; /* Reduce el espacio debajo del nombre */
+    margin-block-end: 5px;
+    /* Reduce el espacio debajo del nombre */
 }
 
 .profile-pic {
-    display: block; /* Asegura que la imagen se trate como bloque */
-    margin: 0 auto; /* Centra horizontalmente la imagen */
-    inline-size: 200px; /* Ajusta el tamaño según sea necesario */
-    block-size: auto; /* Mantén la proporción de la imagen */
-    object-fit: cover; /* Asegura que la imagen no se distorsione */
-    border-radius: 8px; /* Da bordes suaves */
-    filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
-    border: 5px solid #fff; /* Añade un borde blanco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra profesional */
-    transition: filter 0.3s ease, transform 0.3s ease; /* Suaviza animaciones */
+    display: block;
+    /* Asegura que la imagen se trate como bloque */
+    margin: 0 auto;
+    /* Centra horizontalmente la imagen */
+    inline-size: 200px;
+    /* Ajusta el tamaño según sea necesario */
+    block-size: auto;
+    /* Mantén la proporción de la imagen */
+    object-fit: cover;
+    /* Asegura que la imagen no se distorsione */
+    border-radius: 8px;
+    /* Da bordes suaves */
+    filter: grayscale(100%);
+    /* Convierte la imagen a blanco y negro */
+    border: 5px solid #fff;
+    /* Añade un borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra profesional */
+    transition: filter 0.3s ease, transform 0.3s ease;
+    /* Suaviza animaciones */
 }
 
 .profile-pic:hover {
-    transform: scale(1.05); /* Ampliación ligera para destacar */
+    transform: scale(1.05);
+    /* Ampliación ligera para destacar */
 }
 
 /* Estilo para las secciones de experiencia y proyectos */
@@ -195,15 +221,19 @@ article {
 }
 
 .habilidad i:hover {
-    color: #007bff; /* Cambia al color de acento */
-    transform: scale(1.2); /* Aumenta el tamaño ligeramente */
+    color: #007bff;
+    /* Cambia al color de acento */
+    transform: scale(1.2);
+    /* Aumenta el tamaño ligeramente */
 }
 
 .habilidad label {
     font-weight: bold;
     margin-inline-end: 10px;
-    flex-shrink: 0; /* Evita que el label se reduzca */
+    flex-shrink: 0;
+    /* Evita que el label se reduzca */
 }
+
 progress {
     flex-grow: 1;
     appearance: none;
@@ -219,7 +249,8 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: #007bff; /* Color de la barra */
+    background-color: #007bff;
+    /* Color de la barra */
 }
 
 
@@ -316,16 +347,19 @@ progress::-webkit-progress-value {
     border-radius: 8px;
     text-align: center;
 }
+
 @keyframes modalFadeIn {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .close-btn {
     color: #aaa;
     float: inline-end;
@@ -340,6 +374,7 @@ progress::-webkit-progress-value {
     text-decoration: none;
     cursor: pointer;
 }
+
 /* Configura la animación de desvanecimiento */
 .fade-in {
     opacity: 0;
@@ -351,6 +386,7 @@ progress::-webkit-progress-value {
     opacity: 1;
     transform: translateY(0);
 }
+
 .footer-cv {
     background-color: var(--color-fondo);
     padding: 20px;
@@ -378,11 +414,13 @@ progress::-webkit-progress-value {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 #habilidades-en-desarrollo {
     margin-block-start: 20px;
     padding: 10px;
@@ -407,25 +445,32 @@ progress::-webkit-progress-value {
 .habilidades-desarrollo-lista li {
     margin-block-end: 8px;
 }
+
 .hidden {
     opacity: 0;
-    transform: translateY(20px); /* Posición inicial */
+    transform: translateY(20px);
+    /* Posición inicial */
 }
 
 .fade-in {
-    animation: fadeInEffect 0.5s ease-in-out forwards; /* Aplica transición al aparecer */
+    animation: fadeInEffect 0.5s ease-in-out forwards;
+    /* Aplica transición al aparecer */
 }
 
 @keyframes fadeInEffect {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Inicia desde más abajo */
+        transform: translateY(20px);
+        /* Inicia desde más abajo */
     }
+
     to {
         opacity: 1;
-        transform: translateY(0); /* Llega a su posición normal */
+        transform: translateY(0);
+        /* Llega a su posición normal */
     }
 }
+
 /* Contenedor del menú desplegable */
 #language-dropdown {
     position: relative;
@@ -453,7 +498,8 @@ progress::-webkit-progress-value {
 
 /* Opciones del menú desplegable */
 #language-options {
-    display: none; /* Inicialmente oculto */
+    display: none;
+    /* Inicialmente oculto */
     position: absolute;
     background-color: #f9f9f9;
     min-inline-size: 160px;
@@ -478,29 +524,28 @@ progress::-webkit-progress-value {
     background-color: #ddd;
 }
 
-#language-dropdown:hover #language-options {
-    display: block; /* Mostrar al pasar el cursor */
-}
-
 /* Adaptabilidad */
 @media (max-width: 768px) {
     #language-button {
         font-size: 14px;
         padding: 8px 16px;
     }
-    
+
     #language-options button {
         font-size: 14px;
         padding: 8px;
     }
 }
+
 /* Estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.5s ease, color 0.5s ease;
-    background-color: #ffffff; /* Fondo claro inicial */
-    color: #000000; /* Texto negro inicial */
+    background-color: #ffffff;
+    /* Fondo claro inicial */
+    color: #000000;
+    /* Texto negro inicial */
 }
 
 #content {
@@ -521,7 +566,8 @@ body {
     block-size: 50px;
     border: none;
     border-radius: 50%;
-    background-color: #ffcc00; /* Color del botón claro */
+    background-color: #ffcc00;
+    /* Color del botón claro */
     color: #ffffff;
     font-size: 20px;
     cursor: pointer;
@@ -536,20 +582,26 @@ body {
 
 /* Modo oscuro */
 body.dark {
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #e0e0e0;
+    /* Texto claro */
 }
 
 body.dark #toggle-btn {
-    background-color: #444444; /* Botón oscuro */
+    background-color: #444444;
+    /* Botón oscuro */
 }
+
 /* Estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.5s ease, color 0.5s ease;
-    background-color: #ffffff; /* Fondo claro inicial */
-    color: #000000; /* Texto negro inicial */
+    background-color: #ffffff;
+    /* Fondo claro inicial */
+    color: #000000;
+    /* Texto negro inicial */
 }
 
 #content {
@@ -570,7 +622,8 @@ body {
     block-size: 50px;
     border: none;
     border-radius: 50%;
-    background-color: #ffffff; /* Color del botón claro */
+    background-color: #ffffff;
+    /* Color del botón claro */
     color: #ffffff;
     font-size: 20px;
     cursor: pointer;
@@ -585,54 +638,81 @@ body {
 
 /* Modo oscuro */
 body.dark {
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #e0e0e0;
+    /* Texto claro */
 }
 
 body.dark #toggle-btn {
-    background-color: #444444; /* Botón oscuro */
+    background-color: #444444;
+    /* Botón oscuro */
 }
+
 /* Modo oscuro */
 body.dark {
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #e0e0e0;
+    /* Texto claro */
 }
 
 body.dark #toggle-btn {
-    background-color: #444444; /* Botón oscuro */
+    background-color: #444444;
+    /* Botón oscuro */
 }
 
 body.dark .column {
-    background-color: #333333; /* Fondo de las columnas en oscuro */
-    color: #dddddd; /* Texto de las columnas en oscuro */
+    background-color: #333333;
+    /* Fondo de las columnas en oscuro */
+    color: #dddddd;
+    /* Texto de las columnas en oscuro */
 }
 
 body.dark #content {
-    transform: scale(1.02); /* Animación ligera al cambiar tema */
+    transform: scale(1.02);
+    /* Animación ligera al cambiar tema */
     opacity: 0.95;
 }
+
 body.dark .profile-container {
-    background: #333333; /* Fondo oscuro */
-    color: #ffffff; /* Texto claro */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+    background: #333333;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    /* Sombra más intensa */
 }
+
 /* Estilo en modo oscuro */
 body.dark #habilidades-en-desarrollo {
-    background-color: #2c2c2c; /* Fondo oscuro */
-    color: #ffffff; /* Texto claro */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+    background-color: #2c2c2c;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra más intensa */
 }
+
 /* Modo oscuro */
 body.dark .footer-cv {
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: #f0f0f0; /* Texto claro */
-    border-block-start: 1px solid #333; /* Separador más tenue */
+    background-color: #1a1a1a;
+    /* Fondo oscuro */
+    color: #f0f0f0;
+    /* Texto claro */
+    border-block-start: 1px solid #333;
+    /* Separador más tenue */
 }
+
 /* Modo oscuro: estilos específicos para h2 y p */
 body.dark .footer-cv h2 {
-    color: #ffcc00; /* Un color acento diferente para destacar */
+    color: #ffcc00;
+    /* Un color acento diferente para destacar */
 }
 
 body.dark .footer-cv p {
-    color: #cccccc; /* Texto ligeramente más claro para el modo oscuro */
+    color: #cccccc;
+    /* Texto ligeramente más claro para el modo oscuro */
 }
+
+

@@ -34,7 +34,7 @@
     </script>
 </head>
 
-<body onload="loadLanguage('en')"> <!-- Cargar inglés por defecto -->
+<body onload="loadLanguage('es')"> <!-- Cargar Español por defecto -->
     <!-- Botones de idioma -->
     <div id="welcome-screen">
         <div class="welcome-content">
@@ -60,6 +60,7 @@
     <div id="theme-toggle">
         <button id="toggle-btn" onclick="toggleTheme()">💡</button>
     </div>
+    
     <header>
         <div class="container">
             <!-- Columna 1: Foto, nombre, Resumen Profesional y Habilidades Técnicas -->
@@ -385,7 +386,12 @@
                     <p data-lang="copyrightText" © 2024 Jesús Adrián Molina Hernández. Todos los derechos reservados.>
                     </p>
                 </section>
-            </footer>
+                <div style="text-align: center; margin-top: 05px; font-family: 'Roboto', sans-serif; font-size: 10px; color: #333;">
+                    <p>Si necesitas una copia en PDF, <a href="mailto:jeshuamolina24@gmail.com" style="color: #4CAF50; text-decoration: none;">contáctame</a> y te enviaré una versión profesional.</p>
+
+                </div>
+                
+            </footer>      
             <!-- Botones de muestra para abrir el modal con imagen, título y descripción -->
             <div
                 onclick="abrirModal('Certificado en Introducción a LoT', 'Este es un resumen del certificado en Introducción a LoT.', 'Imagenes/to Lot.jpg')">

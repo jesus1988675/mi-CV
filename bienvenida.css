@@ -14,6 +14,7 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative; /* Esto asegura que los hijos absolutos puedan ubicarse en relación a la pantalla */
     font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     /* Tipografía moderna */
     background-color: var(--color-fondo);
@@ -29,12 +30,8 @@ body {
 /* Fondo de partículas */
 #particles {
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    inline-size: 100%;
-    block-size: 100%;
+    inset: 0;
     pointer-events: none;
-    overflow: hidden;
     z-index: -1;
 }
 
@@ -50,11 +47,9 @@ body {
     0% {
         transform: translateY(0) translateX(0);
     }
-
     50% {
         transform: translateY(-50px) translateX(20px);
     }
-
     100% {
         transform: translateY(0) translateX(0);
     }
@@ -62,25 +57,24 @@ body {
 
 /* Contenedor principal de la pantalla de bienvenida */
 #welcome-screen {
+    max-inline-size: 100%;
     text-align: center;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
 }
 
 /* Animación de Lottie */
 dotlottie-player {
-    margin-block-start: 40px;
-    inline-size: 350px;
-    /* Aumentamos el tamaño para darle más protagonismo */
-    block-size: 350px;
-    display: inline-block;
-    animation: fadeInLottie 5s ease-out forwards;
+    margin-block-start: 20px;
+    inline-size: 300px;
+    block-size: 300px;
+    max-inline-size: 100%;
+    animation: fadeInLottie 2s ease-out forwards;
 }
 
 /* Animación de entrada de Lottie */
@@ -97,34 +91,28 @@ dotlottie-player {
 /* Animación para que los textos aparezcan como máquina de escribir */
 .welcome-content h1 {
     margin: 15px 0;
-    display: block;
-    font-size: 3em;
-    /* Aumentamos el tamaño para un impacto visual mayor */
+    font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
-    /* Tipografía elegante */
     font-weight: 700;
-    /* Un estilo más audaz */
     color: var(--color-acento);
     letter-spacing: 2px;
-    /* Espaciado de letras para hacerlo más legible */
     overflow: hidden;
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
-    /* Cursor de la máquina de escribir */
+    animation: typingH1 3s steps(30) 0.5s 1 normal both, blink 0.75s step-end infinite;
 }
 
 .welcome-content p {
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    /* Tipografía moderna y legible */
     font-weight: 400;
-    /* Menos peso que el h1 para un contraste elegante */
     color: var(--color-texto);
     margin: 10px 0;
     letter-spacing: 1px;
     overflow: hidden;
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
+    animation: typingP 3s steps(30) 3.5s 1 normal both, blink 0.75s step-end infinite;
 }
 
 /* Animación de la máquina de escribir */
@@ -180,45 +168,30 @@ dotlottie-player {
 /* Boton de cv*/
 .neumorphic-button {
     background: #ffffff;
-    /* Fondo blanco */
     border: none;
-    /* Sin bordes */
     border-radius: 12px;
-    /* Bordes redondeados */
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15),
         -8px -8px 15px rgba(255, 255, 255, 0.8);
-    /* Sombras */
     color: #555;
-    /* Color del texto */
     font-size: 1rem;
-    /* Tamaño de la fuente */
     font-weight: bold;
-    /* Texto en negrita */
     padding: 10px 20px;
-    /* Espaciado interno */
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre el botón */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    /* Transiciones suaves */
-    margin-block-start: 30px;
-    /* Añadir margen superior */
-
+    margin-block-start: 20px;
+    max-inline-size: 90%;
 }
 
 .neumorphic-button:hover {
     transform: translateY(-3px);
-    /* Eleva el botón */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
         -5px -5px 10px rgba(255, 255, 255, 0.8);
-
 }
 
 .neumorphic-button:active {
     transform: translateY(2px);
-    /* Botón presionado */
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
         inset -5px -5px 10px rgba(255, 255, 255, 0.7);
-    /* Sombras internas */
 }
 
 
@@ -325,18 +298,11 @@ dotlottie-player {
 
 /* Contenedor del menú desplegable */
 #language-dropdown {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    margin-block-start: 20px;
-    position: absolute;
-    /* Cambiar a absolute para permitir la alineación */
-    inset-block-start: 20px;
-    /* Distancia desde la parte superior */
-    inset-inline-start: -620px;
-    /* Distancia desde el lado izquierdo */
-    z-index: 10;
-    /* Asegúrate de que esté por encima de otros elementos */
+    position: fixed; /* Fija el botón respecto a la ventana del navegador */
+    top: 10px; /* Margen desde la parte superior */
+    left: 10px; /* Margen desde la parte izquierda */
+    text-align: left; /* Asegura la alineación del texto en el botón */
+    z-index: 1000; /* Garantiza que esté en la capa superior */
 }
 
 /* Botón principal */
@@ -344,12 +310,11 @@ dotlottie-player {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
 }
 
 #language-button:hover {
@@ -360,14 +325,11 @@ dotlottie-player {
 /* Opciones del menú desplegable */
 #language-options {
     display: none;
-    /* Inicialmente oculto */
     position: absolute;
     background-color: #f9f9f9;
     min-inline-size: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    z-index: 1;
-    overflow: hidden;
 }
 
 #language-options button {
@@ -378,7 +340,6 @@ dotlottie-player {
     text-align: start;
     inline-size: 100%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 #language-options button:hover {
@@ -387,14 +348,34 @@ dotlottie-player {
 
 /* Adaptabilidad */
 @media (max-width: 768px) {
-    #language-button {
-        font-size: 14px;
-        padding: 8px 16px;
+    .welcome-content h1 {
+        font-size: 2rem;
     }
-
-    #language-options button {
-        font-size: 14px;
-        padding: 8px;
+    .welcome-content p {
+        font-size: 1rem;
+    }
+    dotlottie-player {
+        inline-size: 200px;
+        block-size: 200px;
+    }
+    .neumorphic-button {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .welcome-content h1 {
+        font-size: 1.8rem;
+    }
+    .welcome-content p {
+        font-size: 0.9rem;
+    }
+    dotlottie-player {
+        inline-size: 150px;
+        block-size: 150px;
+    }
+    .neumorphic-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
     }
 }
 

@@ -1,3 +1,5 @@
+
+
 // Función para abrir el modal del certificado con imagen
 function abrirModal(titulo, descripcion, imagenSrc) {
     // Obtener el modal y sus elementos de contenido
@@ -66,3 +68,18 @@ function toggleTheme() {
         button.textContent = '💡'; // Ícono para el modo claro
     }
 }
+const languageButton = document.getElementById("language-button");
+const languageOptions = document.getElementById("language-options");
+
+// Alternar visibilidad al hacer clic
+languageButton.addEventListener("click", () => {
+    const isVisible = languageOptions.style.display === "block";
+    languageOptions.style.display = isVisible ? "none" : "block";
+});
+
+// Ocultar menú al hacer clic fuera de él
+document.addEventListener("click", (event) => {
+    if (!languageButton.contains(event.target) && !languageOptions.contains(event.target)) {
+        languageOptions.style.display = "none";
+    }
+});
