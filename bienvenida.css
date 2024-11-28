@@ -281,8 +281,8 @@ dotlottie-player {
 /* Ajustes para dispositivos de hasta 768px */
 @media (max-width: 768px) {
     #language-dropdown {
-        top: 10px;
-        left: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .welcome-content {
@@ -305,7 +305,7 @@ dotlottie-player {
 /* Media queries para dispositivos móviles */
 @media (max-width: 480px) {
     .welcome-content h1 {
-        font-size: 5vw;
+        font-size: 14px;
 
         /* Reduce aún más el tamaño del texto */
     }
