@@ -97,19 +97,18 @@ dotlottie-player {
 }
 /* Aseguramos que el contenedor esté centrado */
 .welcome-content {
-    position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
     align-items: center;    /* Centra horizontalmente */
     text-align: center;     /* Centra el texto */
     padding: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
 }
 /* Animación para que los textos aparezcan como máquina de escribir */
 .welcome-content h1 {
-    position: relative;
-
     margin: 10px 0;
     display: block;
     font-size: 3em;
@@ -126,11 +125,12 @@ dotlottie-player {
     border-inline-end: 4px solid var(--color-acento);
     /* Cursor de la máquina de escribir */
     overflow: hidden; /* Asegura que el contenido adicional no desborde */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
 }
 
 .welcome-content p {
-    position: relative;
-
     margin: 10px 0; /* Espaciado entre los textos */
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
@@ -148,7 +148,6 @@ dotlottie-player {
     word-wrap: break-word;
     overflow-wrap: break-word;
     overflow: hidden; /* Asegura que el contenido adicional no desborde */
-
 }
 /* Animación de la máquina de escribir */
 @keyframes typingH1 {
