@@ -94,7 +94,16 @@ dotlottie-player {
         opacity: 1;
     }
 }
-
+/* Aseguramos que el contenedor esté centrado */
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;    /* Centra horizontalmente */
+    height: 100vh;          /* Ocupa toda la altura de la pantalla */
+    text-align: center;     /* Centra el texto */
+    padding: 20px;
+}
 /* Animación para que los textos se desplacen desde la izquierda */
 .welcome-content h1,
 .welcome-content p {
