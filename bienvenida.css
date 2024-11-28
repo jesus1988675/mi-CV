@@ -93,45 +93,23 @@ dotlottie-player {
     }
 }
 
-/* Ajustes generales para títulos */
-.welcome-content h1 {
-    margin: 10px 0;
-    font-size: 6vw;
-    /* Ajusta dinámicamente el tamaño según el ancho de la pantalla */
+/* Animación para que los textos se desplacen desde la izquierda */
+.welcome-content h1,
+.welcome-content p {
+    margin: 15px 0;
+    font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: var(--color-acento);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     overflow: hidden;
-    white-space: normal;
-    /* Permite el salto de línea automático */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* Asegura que las palabras largas se ajusten */
+    white-space: nowrap;
+    animation: slideInFromLeft 1s ease-out both;
+    /* Animación corregida */
+    padding: 20px;
+    border-radius: 10px;
     line-height: 1.2;
-    /* Reduce el espacio entre líneas */
-    text-align: center;
-    /* Alinea el texto en el centro */
-}
-
-/* Ajustes generales para párrafos */
-.welcome-content p {
-    font-size: 4vw;
-    /* Ajusta dinámicamente el tamaño del texto */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: var(--color-texto);
-    margin: 8px 0;
-    letter-spacing: 0.5px;
-    white-space: normal;
-    /* Permite el salto de línea automático */
     word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* Asegura que las palabras largas se ajusten */
-    line-height: 1.4;
-    /* Ajusta el espacio entre líneas */
-    text-align: justify;
-    /* Alineación justificada */
 }
 
 /* Animación de la máquina de escribir */
@@ -249,17 +227,16 @@ dotlottie-player {
     /* Efecto de escribir para p */
 }
 
-@keyframes fadeInEffect {
-    from {
+/* Animación desde la izquierda */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
         opacity: 0;
-        transform: translateY(20px);
-        /* Inicia desde más abajo */
     }
 
-    to {
+    100% {
+        transform: translateX(0);
         opacity: 1;
-        transform: translateY(0);
-        /* Llega a su posición normal */
     }
 }
 
