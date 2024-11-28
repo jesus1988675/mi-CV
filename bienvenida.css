@@ -77,6 +77,7 @@ body {
 
 /* Animación de Lottie */
 dotlottie-player {
+    margin: 10px 0; /* Espaciado entre los textos */
     width: 100%;
     max-width: 400px;
     /* Limita el tamaño de la animación en pantallas grandes */
@@ -96,6 +97,8 @@ dotlottie-player {
 }
 /* Aseguramos que el contenedor esté centrado */
 .welcome-content {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
@@ -105,6 +108,8 @@ dotlottie-player {
 }
 /* Animación para que los textos aparezcan como máquina de escribir */
 .welcome-content h1 {
+    position: relative;
+
     margin: 10px 0;
     display: block;
     font-size: 3em;
@@ -124,6 +129,8 @@ dotlottie-player {
 }
 
 .welcome-content p {
+    position: relative;
+
     margin: 10px 0; /* Espaciado entre los textos */
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
