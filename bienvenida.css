@@ -100,13 +100,12 @@ dotlottie-player {
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
     align-items: center;    /* Centra horizontalmente */
-    height: 100vh;          /* Ocupa toda la altura de la pantalla */
     text-align: center;     /* Centra el texto */
     padding: 20px;
 }
 /* Animación para que los textos aparezcan como máquina de escribir */
 .welcome-content h1 {
-    margin: 15px 0;
+    margin: 10px 0;
     display: block;
     font-size: 3em;
     /* Aumentamos el tamaño para un impacto visual mayor */
@@ -125,6 +124,7 @@ dotlottie-player {
 }
 
 .welcome-content p {
+    margin: 10px 0; /* Espaciado entre los textos */
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
     /* Tipografía moderna y legible */
