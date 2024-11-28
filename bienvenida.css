@@ -121,6 +121,7 @@ dotlottie-player {
     white-space: nowrap;
     border-inline-end: 4px solid var(--color-acento);
     /* Cursor de la máquina de escribir */
+    overflow: hidden; /* Asegura que el contenido adicional no desborde */
 }
 
 .welcome-content p {
@@ -139,6 +140,7 @@ dotlottie-player {
     line-height: 1.2;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    overflow: hidden; /* Asegura que el contenido adicional no desborde */
 
 }
 /* Animación de la máquina de escribir */
@@ -247,12 +249,12 @@ dotlottie-player {
 
 /* Animaciones de los textos con retrasos */
 .welcome-content h1 {
-    animation: typingH1 3s steps(30) 6s 1 normal both, blink 0.75s step-end infinite;
+    animation: typingH1 3s steps(30) 3s 1 normal both, blink 0.75s step-end infinite;
     /* Efecto de escribir para h1 */
 }
 
 .welcome-content p {
-    animation: typingP 3s steps(30) 9s 1 normal both, blink 0.75s step-end infinite;
+    animation: typingP 3s steps(30) 6s 1 normal both, blink 0.75s step-end infinite;
     /* Efecto de escribir para p */
 }
 
