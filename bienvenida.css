@@ -99,7 +99,7 @@ dotlottie-player {
 .welcome-content h1,
 .welcome-content p {
     margin: 15px 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: var(--color-acento);
@@ -274,11 +274,15 @@ dotlottie-player {
 @media (max-width: 480px) {
     .welcome-content h1 {
         font-size: 5vw;
+        font-size: 1.8rem; /* Tamaño menor para pantallas pequeñas */
+
         /* Reduce aún más el tamaño del texto */
     }
 
     .welcome-content p {
         font-size: 3.5vw;
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+
     }
 }
 
@@ -315,18 +319,6 @@ html {
     border-radius: 5px;
     z-index: 1000;
     /* Cambié z-index a 10 para asegurarme de que esté encima de otros elementos */
-}
-
-/* Diseño responsivo para asegurar que se vean igual en diferentes tamaños de pantalla */
-@media screen and (max-width: 768px) {
-
-    /* Para pantallas pequeñas (tabletas y teléfonos) */
-    #language-dropdown {
-        top: 10px;
-        /* Alineación vertical consistente */
-        left: 10px;
-        /* Alineación horizontal consistente */
-    }
 }
 
 /* Botón principal */
