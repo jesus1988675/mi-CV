@@ -71,6 +71,8 @@ body {
     padding: 20px;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
+    overflow: hidden; /* Previene que los textos se salgan */
+
 }
 
 /* Animación de Lottie */
