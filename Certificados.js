@@ -99,24 +99,4 @@ document.addEventListener('contextmenu', (event) => {
     event.preventDefault();
   });
   
-// Bloquear F12 y otros accesos al DevTools
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
-      event.preventDefault();
-      alert("Acceso denegado.");
-    }
-  });
-  // Detectar comportamiento sospechoso (usuarios sin movimiento de mouse)
-let isBot = true;
-document.addEventListener('mousemove', () => {
-  isBot = false; // Detecta que no es un bot si hay movimiento del mouse
-});
-
-setTimeout(() => {
-  if (isBot) {
-    alert("Acceso bloqueado por actividad sospechosa.");
-    window.location.href = "about:blank"; // Redirige fuera de la página
-  }
-}, 5000); // Verifica después de 5 segundos
-
 document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
