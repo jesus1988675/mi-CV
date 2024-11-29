@@ -74,6 +74,22 @@ document.addEventListener('contextmenu', (event) => {
   });
 
 
-
 // Generar partículas al cargar la página
 window.onload = generateParticles;
+  // Deshabilitar clic derecho, selección de texto y arrastre de imágenes
+  document.addEventListener('contextmenu', (event) => { event.preventDefault(); });
+  document.addEventListener('selectstart', (event) => { event.preventDefault(); });
+  document.addEventListener('dragstart', (event) => { event.preventDefault(); });
+  
+  // Ofuscación de datos sensibles
+  document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
+  document.getElementById('phone').innerHTML = atob("NzIyMzMyNjIxNw=="); // Número de WhatsApp
+  document.getElementById('linkedin').href = atob("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL3R1X2N1ZW50YV9kZV9saW5rZWQ="); // Perfil LinkedIn
+  document.getElementById('outlook').href = atob("bWFpbHRvOmplc3VzdXN1YXJpb0BvdXRsb29rLmNvbQ=="); // Correo Outlook
+  document.getElementById('facebook').href = atob("aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2plc3VzdXN1YXJpbw=="); // Perfil Facebook
+  document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
+  console.log(btoa("7223326217"));
+  console.log(btoa("https://www.linkedin.com/in/tu_cuenta_de_linkedin"));
+  console.log(btoa("mailto:jesususuario@outlook.com"));
+  console.log(btoa("https://www.facebook.com/jesususuario"));
+  
