@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+        <meta name="robots" content="noindex, noarchive, nosnippet">
+
+        <meta http-equiv="X-Frame-Options" content="DENY">
+
     <title>Pantalla de Bienvenida</title>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="bienvenida.css">
@@ -63,21 +69,18 @@
         <h1 id="welcome-title" data-lang="welcomeTitle">
             ¡Bienvenido a mi Portafolio!<span class="typing-cursor"></span>
         </h1>
-    
+
         <!-- Texto de descripción -->
         <p id="welcome-text" data-lang="welcomeText">
             Explora mi experiencia y proyectos destacados en ingeniería en sistemas.<span class="typing-cursor"></span>
         </p>
-    
+
         <!-- Botón para explorar el CV -->
-        <button 
-            class="neumorphic-button" 
-            onclick="redirectToCV()" 
-            data-lang="exploreCV">
+        <button class="neumorphic-button" onclick="redirectToCV()" data-lang="exploreCV">
             Explorar mi CV
         </button>
     </div>
-    
+
 
     <!-- Animación Lottie -->
     <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"
@@ -86,6 +89,7 @@
     <div id="particles"></div>
 
     <script src="Bienvenida.js"></script>
+
 </body>
 
 </html>

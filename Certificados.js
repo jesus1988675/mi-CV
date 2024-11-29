@@ -83,3 +83,40 @@ document.addEventListener("click", (event) => {
         languageOptions.style.display = "none";
     }
 });
+
+// Deshabilitar clic derecho
+document.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+  });
+  
+  // Deshabilitar selección de texto
+  document.addEventListener('selectstart', (event) => {
+    event.preventDefault();
+  });
+  
+  // Deshabilitar arrastre de imágenes
+  document.addEventListener('dragstart', (event) => {
+    event.preventDefault();
+  });
+  
+// Bloquear F12 y otros accesos al DevTools
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+      event.preventDefault();
+      alert("Acceso denegado.");
+    }
+  });
+  // Detectar comportamiento sospechoso (usuarios sin movimiento de mouse)
+let isBot = true;
+document.addEventListener('mousemove', () => {
+  isBot = false; // Detecta que no es un bot si hay movimiento del mouse
+});
+
+setTimeout(() => {
+  if (isBot) {
+    alert("Acceso bloqueado por actividad sospechosa.");
+    window.location.href = "about:blank"; // Redirige fuera de la página
+  }
+}, 5000); // Verifica después de 5 segundos
+
+document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
