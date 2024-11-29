@@ -4,12 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';">
-        <meta name="robots" content="noindex, noarchive, nosnippet">
-
-    <meta http-equiv="X-Frame-Options" content="DENY">
-
     <meta name="description"
         content="Currículum Vitae de Jesús Adrián Molina Hernández, Ingeniero en Sistemas Computacionales. Con experiencia en desarrollo de software y bases de datos.">
     <title>Currículum Vitae - Jesús Adrián Molina Hernández</title>
@@ -41,432 +35,424 @@
 </head>
 
 <body onload="loadLanguage('es')"> <!-- Cargar Español por defecto -->
-    <div id="cv-content" style="display: none;">
-        <!-- Botones de idioma -->
-        <div id="welcome-screen">
-            <div class="welcome-content">
-                <!-- Selector de idioma -->
-                <div id="language-dropdown">
-                    <button id="language-button">Seleccionar Idioma</button>
-                    <div id="language-options">
-                        <button onclick="changeLanguage('es')">Español</button>
-                        <button onclick="changeLanguage('en')">English</button>
-                        <button onclick="changeLanguage('fr')">Français</button>
-                        <button onclick="changeLanguage('de')">Deutsch</button>
-                        <button onclick="changeLanguage('it')">Italiano</button>
-                        <button onclick="changeLanguage('pt')">Português</button>
-                        <button onclick="changeLanguage('nl')">Nederlands</button>
-                        <button onclick="changeLanguage('ru')">Русский</button>
-                        <button onclick="changeLanguage('ja')">日本語</button>
-                        <button onclick="changeLanguage('zh')">中文</button>
-                        <button onclick="changeLanguage('ar')">العربية</button>
-                    </div>
+    <!-- Botones de idioma -->
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <!-- Selector de idioma -->
+            <div id="language-dropdown">
+                <button id="language-button">Seleccionar Idioma</button>
+                <div id="language-options">
+                    <button onclick="changeLanguage('es')">Español</button>
+                    <button onclick="changeLanguage('en')">English</button>
+                    <button onclick="changeLanguage('fr')">Français</button>
+                    <button onclick="changeLanguage('de')">Deutsch</button>
+                    <button onclick="changeLanguage('it')">Italiano</button>
+                    <button onclick="changeLanguage('pt')">Português</button>
+                    <button onclick="changeLanguage('nl')">Nederlands</button>
+                    <button onclick="changeLanguage('ru')">Русский</button>
+                    <button onclick="changeLanguage('ja')">日本語</button>
+                    <button onclick="changeLanguage('zh')">中文</button>
+                    <button onclick="changeLanguage('ar')">العربية</button>
                 </div>
             </div>
         </div>
-        <div id="theme-toggle">
-            <button id="toggle-btn" onclick="toggleTheme()">💡</button>
-        </div>
-
-        <header>
-            <div class="container">
-                <!-- Columna 1: Foto, nombre, Resumen Profesional y Habilidades Técnicas -->
-                <div class="column">
-                    <div class="nombre-cv">
-                        <h1 class="nombre">Jesús Adrián Molina Hernández</h1>
-                        <p data-lang="slogan">"Transformando ideas en soluciones digitales de impacto"</p>
-                        <!-- Slogan agregado -->
-                    </div> <!-- Nombre en grande y negrita -->
-                    <div class="profile-container">
-                        <h3 data-lang="profession" Ingeniero en Sistemas></h3>
-                        <img src="Imagenes/IMG_20210912_233012.jpg"
-                            alt="Foto de perfil de Jesús Adrián Molina Hernández" class="profile-pic">
-                    </div>
-
-                    <!-- Correos de contacto -->
-                    <section id="contacto">
-                        <h2 data-lang="contact" Contacto></h2>
-                        <ul>
-                            <li><a href="mailto:jeshuamolina24@gmail.com"><i class="fas fa-envelope"
-                                        style="color: #db4a39;"></i> jeshuamolina24@gmail.com</a></li>
-                            <li><a href="mailto:Adrianojam@outlook.com"><i class="fas fa-envelope"
-                                        style="color: #0cc1f8;"></i> Adrianojam@outlook.com</a></li>
-                            <li><a href="https://www.linkedin.com/in/jesusadrianm/" target="_blank"><i
-                                        class="fab fa-linkedin" style="color: #0e76a8;"></i> LinkedIn</a></li>
-                            <li><a href="https://wa.me/7223326217" target="_blank"><i class="fab fa-whatsapp"
-                                        style="color: #25d366;"></i> WhatsApp</a></li>
-                            <li><a href="https://www.facebook.com/jesus1988@hotmail.com" target="_blank"><i
-                                        class="fab fa-facebook" style="color: #4267B2;"></i> Facebook</a></li>
-                        </ul>
-                    </section>
-                    <!-- Resumen Profesional -->
-                    <section id="resumen">
-                        <h2 data-lang="profile" Perfil Profesional></h2>
-                        <p data-lang="profileText" Ingeniero en Sistemas Computacionales con una sólida experiencia en
-                            desarrollo de software, bases de datos y ciberseguridad. Proactivo y orientado a resultados,
-                            con habilidades avanzadas en resolución de problemas y aprendizaje continuo. Apasionado por
-                            la tecnología y comprometido con la mejora constante de procesos y herramientas digitales.>
-                        </p>
-                    </section>
-
-                    <!-- Habilidades Técnicas -->
-                    <section id="habilidades">
-                        <h2 data-lang="technicalSkills" Habilidades Técnicas></h2>
-
-                        <div class="habilidad">
-                            <label for="flutter" data-lang="Flutter">Flutter (Basic)</label>
-                            <progress id="flutter" value="80" max="100"></progress>
-                            <span>80%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="kotlin" data-lang="Kotlin">Kotlin (Basic)</label>
-                            <progress id="kotlin" value="70" max="100"></progress>
-                            <span>70%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="java" data-lang="Java">Java (Advanced)</label>
-                            <progress id="java" value="75" max="100"></progress>
-                            <span>75%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="mysql" data-lang="MySQL">MySQL (Intermediate)</label>
-                            <progress id="mysql" value="85" max="100"></progress>
-                            <span>85%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="postgresql" data-lang="PostgreSQL">PostgreSQL (Intermediate)</label>
-                            <progress id="postgresql" value="80" max="100"></progress>
-                            <span>80%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="mongodb" data-lang="MongoDB">MongoDB (Basic)</label>
-                            <progress id="mongodb" value="70" max="100"></progress>
-                            <span>70%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="html" data-lang="HTML">HTML (Intermediate)</label>
-                            <progress id="html" value="90" max="100"></progress>
-                            <span>90%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="css" data-lang="CSS">CSS (Intermediate)</label>
-                            <progress id="css" value="85" max="100"></progress>
-                            <span>85%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="javascript" data-lang="JavaScript">JavaScript (Intermediate)</label>
-                            <progress id="javascript" value="80" max="100"></progress>
-                            <span>80%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="php" data-lang="php">PHP (Intermediate)</label>
-                            <progress id="php" value="75" max="100"></progress>
-                            <span>75%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="arduino" data-lang="Arduino">Arduino (Intermediate)</label>
-                            <progress id="arduino" value="65" max="100"></progress>
-                            <span>65%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="VSC" data-lang="Visual Studio Code">Visual Studio Code (Advanced)</label>
-                            <progress id="VSC" value="70" max="100"></progress>
-                            <span>70%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="Cisco" data-lang="Cisco Networking">Cisco Redes (Intermediate)</label>
-                            <progress id="Cisco" value="80" max="100"></progress>
-                            <span>80%</span>
-                        </div>
-
-                        <div class="habilidad">
-                            <label for="vs_Maquinas Virtuales" data-lang="vs_virtual_machines_intermediate">VS /
-                                Maquinas
-                                Virtuales (Intermediate)</label>
-                            <progress id="vs_Maquinas Virtuales" value="60" max="100"></progress>
-                            <span>60%</span>
-                        </div>
-                    </section>
+    </div>
+    <div id="theme-toggle">
+        <button id="toggle-btn" onclick="toggleTheme()">💡</button>
+    </div>
+    
+    <header>
+        <div class="container">
+            <!-- Columna 1: Foto, nombre, Resumen Profesional y Habilidades Técnicas -->
+            <div class="column">
+                <div class="nombre-cv">
+                    <h1 class="nombre">Jesús Adrián Molina Hernández</h1>
+                    <p data-lang="slogan">"Transformando ideas en soluciones digitales de impacto"</p>
+                    <!-- Slogan agregado -->
+                </div> <!-- Nombre en grande y negrita -->
+                <div class="profile-container">
+                    <h3 data-lang="profession" Ingeniero en Sistemas></h3>
+                    <img src="Imagenes/IMG_20210912_233012.jpg" alt="Foto de perfil de Jesús Adrián Molina Hernández"
+                        class="profile-pic">
                 </div>
 
-                <!-- Columna 2: Experiencia, Educación y Proyectos -->
-                <div class="column">
-                    <section id="experiencia">
-                        <h2 data-lang="workExperience" Experiencia Laboral></h2>
-                        <article>
-                            <h3 data-lang="appDeveloper" Desarrollador de aplicaciones></h3>
-                            <p data-lang="2024 - Present" 2024 - Actualidad></p>
-                            <p data-lang="appDeveloperText" Diseñé e implementé aplicaciones móviles usando Flutter y
-                                Firebase, logrando una mejora del 25% en la eficiencia de carga de datos en aplicaciones
-                                internas.></p>
-                        </article>
-                    </section>
+                <!-- Correos de contacto -->
+                <section id="contacto">
+                    <h2 data-lang="contact" Contacto></h2>
+                    <ul>
+                        <li><a href="mailto:jeshuamolina24@gmail.com"><i class="fas fa-envelope"
+                                    style="color: #db4a39;"></i> jeshuamolina24@gmail.com</a></li>
+                        <li><a href="mailto:Adrianojam@outlook.com"><i class="fas fa-envelope"
+                                    style="color: #0cc1f8;"></i> Adrianojam@outlook.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/jesusadrianm/" target="_blank"><i
+                                    class="fab fa-linkedin" style="color: #0e76a8;"></i> LinkedIn</a></li>
+                        <li><a href="https://wa.me/7223326217" target="_blank"><i class="fab fa-whatsapp"
+                                    style="color: #25d366;"></i> WhatsApp</a></li>
+                        <li><a href="https://www.facebook.com/jesus1988@hotmail.com" target="_blank"><i
+                                    class="fab fa-facebook" style="color: #4267B2;"></i> Facebook</a></li>
+                    </ul>
+                </section>
+                <!-- Resumen Profesional -->
+                <section id="resumen">
+                    <h2 data-lang="profile" Perfil Profesional></h2>
+                    <p data-lang="profileText" Ingeniero en Sistemas Computacionales con una sólida experiencia en
+                        desarrollo de software, bases de datos y ciberseguridad. Proactivo y orientado a resultados, con
+                        habilidades avanzadas en resolución de problemas y aprendizaje continuo. Apasionado por la
+                        tecnología y comprometido con la mejora constante de procesos y herramientas digitales.></p>
+                </section>
 
+                <!-- Habilidades Técnicas -->
+                <section id="habilidades">
+                    <h2 data-lang="technicalSkills" Habilidades Técnicas></h2>
+
+                    <div class="habilidad">
+                        <label for="flutter" data-lang="Flutter">Flutter (Basic)</label>
+                        <progress id="flutter" value="80" max="100"></progress>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="kotlin" data-lang="Kotlin">Kotlin (Basic)</label>
+                        <progress id="kotlin" value="70" max="100"></progress>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="java" data-lang="Java">Java (Advanced)</label>
+                        <progress id="java" value="75" max="100"></progress>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="mysql" data-lang="MySQL">MySQL (Intermediate)</label>
+                        <progress id="mysql" value="85" max="100"></progress>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="postgresql" data-lang="PostgreSQL">PostgreSQL (Intermediate)</label>
+                        <progress id="postgresql" value="80" max="100"></progress>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="mongodb" data-lang="MongoDB">MongoDB (Basic)</label>
+                        <progress id="mongodb" value="70" max="100"></progress>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="html" data-lang="HTML">HTML (Intermediate)</label>
+                        <progress id="html" value="90" max="100"></progress>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="css" data-lang="CSS">CSS (Intermediate)</label>
+                        <progress id="css" value="85" max="100"></progress>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="javascript" data-lang="JavaScript">JavaScript (Intermediate)</label>
+                        <progress id="javascript" value="80" max="100"></progress>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="php" data-lang="php">PHP (Intermediate)</label>
+                        <progress id="php" value="75" max="100"></progress>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="arduino" data-lang="Arduino">Arduino (Intermediate)</label>
+                        <progress id="arduino" value="65" max="100"></progress>
+                        <span>65%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="VSC" data-lang="Visual Studio Code">Visual Studio Code (Advanced)</label>
+                        <progress id="VSC" value="70" max="100"></progress>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="Cisco" data-lang="Cisco Networking">Cisco Redes (Intermediate)</label>
+                        <progress id="Cisco" value="80" max="100"></progress>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <label for="vs_Maquinas Virtuales" data-lang="vs_virtual_machines_intermediate">VS / Maquinas
+                            Virtuales (Intermediate)</label>
+                        <progress id="vs_Maquinas Virtuales" value="60" max="100"></progress>
+                        <span>60%</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Columna 2: Experiencia, Educación y Proyectos -->
+            <div class="column">
+                <section id="experiencia">
+                    <h2 data-lang="workExperience" Experiencia Laboral></h2>
                     <article>
-                        <h3 data-lang="webDeveloper" Desarrollador de Páginas Web></h3>
-                        <p data-lang="2022 - Present" 2022 - Actualidad></p>
-                        <p data-lang="webDeveloperText" He creado y mantenido múltiples páginas web con tecnologías como
-                            HTML, CSS, JavaScript y PHP, enfocadas en brindar una experiencia de usuario intuitiva y
-                            profesional. Implementé mejoras de diseño y optimización SEO, incrementando el tráfico en un
+                        <h3 data-lang="appDeveloper" Desarrollador de aplicaciones></h3>
+                        <p data-lang="2024 - Present" 2024 - Actualidad></p>
+                        <p data-lang="appDeveloperText" Diseñé e implementé aplicaciones móviles usando Flutter y
+                            Firebase, logrando una mejora del 25% en la eficiencia de carga de datos en aplicaciones
+                            internas.></p>
+                    </article>
+                </section>
+
+                <article>
+                    <h3 data-lang="webDeveloper" Desarrollador de Páginas Web></h3>
+                    <p data-lang="2022 - Present" 2022 - Actualidad></p>
+                    <p data-lang="webDeveloperText" He creado y mantenido múltiples páginas web con tecnologías como
+                        HTML, CSS, JavaScript y PHP, enfocadas en brindar una experiencia de usuario intuitiva y
+                        profesional. Implementé mejoras de diseño y optimización SEO, incrementando el tráfico en un
+                        30%.></p>
+                </article>
+
+                <article>
+                    <h3 data-lang="productSalesDev" Desarrollador de Aplicaciones para Ventas de Productos></h3>
+                    <p data-lang="2022 - Present" 2022 - Actualidad></p>
+                    <p data-lang="productSalesDevText" Desarrollé aplicaciones de ventas de productos, integrando
+                        métodos de pago seguros y funciones de carrito de compras y notificaciones. Estas aplicaciones
+                        han facilitado el aumento de ventas en un 40% para los clientes, gracias a una experiencia de
+                        compra fluida y rápida.></p>
+                </article>
+
+                <article>
+                    <h3 data-lang="businessAppDev" Desarrollador de Aplicaciones para Negocios></h3>
+                    <p data-lang="2023 - Present" 2023 - Actualidad></p>
+                    <p data-lang="businessAppDevText" Diseñé aplicaciones personalizadas para negocios locales que
+                        incluyen gestión de inventario, control de citas y facturación electrónica, logrando mejoras en
+                        la organización y en la eficiencia de los procesos internos de estos negocios en un 50%.></p>
+                </article>
+                </section>
+
+                <section id="educacion">
+                    <h2 data-lang="education" Educación></h2>
+                    <article>
+                        <h3 data-lang="degree" Ingeniería en Sistemas Computacionales></h3>
+                        <p data-lang="ISIMA University - 2021 - 2024" Universidad ISIMA - 2021 - 2024></p>
+                    </article>
+                </section>
+
+                <section id="proyectos">
+                    <h2 data-lang="projects" Proyectos></h2>
+                    <article>
+                        <h3 data-lang="inventoryApp" Aplicación de Control de Inventarios></h3>
+                        <p data-lang="inventoryAppText" Desarrollé una aplicación web de gestión de inventarios en
+                            tiempo real utilizando PHP y MySQL, mejorando la precisión del seguimiento de stock en un
                             30%.></p>
                     </article>
-
                     <article>
-                        <h3 data-lang="productSalesDev" Desarrollador de Aplicaciones para Ventas de Productos></h3>
-                        <p data-lang="2022 - Present" 2022 - Actualidad></p>
-                        <p data-lang="productSalesDevText" Desarrollé aplicaciones de ventas de productos, integrando
-                            métodos de pago seguros y funciones de carrito de compras y notificaciones. Estas
-                            aplicaciones han facilitado el aumento de ventas en un 40% para los clientes, gracias a una
-                            experiencia de compra fluida y rápida.></p>
+                        <h3 data-lang="homeAutomation" Automatización del Hogar - IoT></h3>
+                        <p data-lang="homeAutomationText" Diseñé un sistema de automatización del hogar basado en
+                            Arduino, controlado desde una aplicación móvil personalizada, optimizando el consumo de
+                            energía en dispositivos electrónicos del hogar.></p>
+                    </article>
+                    <article>
+                        <h3 data-lang="vmApp" Elaboración de aplicación en máquina virtual en Visual Studio></h3>
+                        <p data-lang="vmAppText" Desarrollo de una aplicación en Visual Studio utilizando una máquina
+                            virtual para simular el entorno de ejecución. El proyecto consistió en la creación de una
+                            plataforma de gestión de transportes que facilita la administración de rutas, vehículos y
+                            operadores.></p>
                     </article>
 
                     <article>
-                        <h3 data-lang="businessAppDev" Desarrollador de Aplicaciones para Negocios></h3>
-                        <p data-lang="2023 - Present" 2023 - Actualidad></p>
-                        <p data-lang="businessAppDevText" Diseñé aplicaciones personalizadas para negocios locales que
-                            incluyen gestión de inventario, control de citas y facturación electrónica, logrando mejoras
-                            en la organización y en la eficiencia de los procesos internos de estos negocios en un 50%.>
-                        </p>
+                        <h3 data-lang="freightSystem" Sistema de Gestión de Transporte de Mercancías></h3>
+                        <p data-lang="freightSystemText" Creación de un sistema integral de gestión de transporte para
+                            el control de la logística de mercancías, basado en un sistema de bases de datos con
+                            registros de choferes, entradas, salidas y viáticos.></p>
                     </article>
-                    </section>
+                </section>
+            </div>
 
-                    <section id="educacion">
-                        <h2 data-lang="education" Educación></h2>
-                        <article>
-                            <h3 data-lang="degree" Ingeniería en Sistemas Computacionales></h3>
-                            <p data-lang="ISIMA University - 2021 - 2024" Universidad ISIMA - 2021 - 2024></p>
-                        </article>
-                    </section>
+            <!-- Columna 3: Certificados -->
+            <div class="column">
+                <section id="certificados">
+                    <h2 data-lang="certificates" Certificados></h2>
+                    <article class="certificado">
+                        <a href="javascript:void(0);"
+                            onclick="abrirModal('Certificado en Ciberseguridad', 'Este certificado acredita habilidades avanzadas en ciberseguridad.', 'Imagenes/Certificado.jpg')">
+                            <img src="Imagenes/Certificado.jpg" alt="Certificado en Ciberseguridad"
+                                class="certificado-img">
+                            <p data-lang="Cybersecurity" Ciberseguridad></p>
+                        </a>
+                    </article>
+                    <article class="certificado">
+                        <a href="javascript:void(0);"
+                            onclick="abrirModal('Certificado en Introducción a to LoT', 'Este certificado cubre temas fundamentales sobre el Internet de las Cosas (IoT) y su aplicación.', 'Imagenes/to Lot.jpg')">
+                            <img src="Imagenes/to Lot.jpg" alt="Certificado en Introducción a LoT"
+                                class="certificado-img">
+                            <p data-lang="Introduction to IoT" Introducción a IoT></p>
+                        </a>
+                    </article>
+                    <article class="certificado">
+                        <a href="javascript:void(0);"
+                            onclick="abrirModal('Certificado en Introducción a la Ciencia de Datos', 'Este certificado avala conocimientos clave en Ciencia de Datos, abarcando técnicas avanzadas de análisis, manipulación y visualización de datos.', 'Imagenes/analisis de datos.jpg')">
+                            <img src="Imagenes/analisis de datos.jpg"
+                                alt="Certificado en Introducción a ala Ciencia de Datos" class="certificado-img">
+                            <p data-lang="Introduction to Data Science" a la Ciencia de Datos></p>
+                        </a>
+                    </article>
+                </section>
 
-                    <section id="proyectos">
-                        <h2 data-lang="projects" Proyectos></h2>
-                        <article>
-                            <h3 data-lang="inventoryApp" Aplicación de Control de Inventarios></h3>
-                            <p data-lang="inventoryAppText" Desarrollé una aplicación web de gestión de inventarios en
-                                tiempo real utilizando PHP y MySQL, mejorando la precisión del seguimiento de stock en
-                                un 30%.></p>
-                        </article>
-                        <article>
-                            <h3 data-lang="homeAutomation" Automatización del Hogar - IoT></h3>
-                            <p data-lang="homeAutomationText" Diseñé un sistema de automatización del hogar basado en
-                                Arduino, controlado desde una aplicación móvil personalizada, optimizando el consumo de
-                                energía en dispositivos electrónicos del hogar.></p>
-                        </article>
-                        <article>
-                            <h3 data-lang="vmApp" Elaboración de aplicación en máquina virtual en Visual Studio></h3>
-                            <p data-lang="vmAppText" Desarrollo de una aplicación en Visual Studio utilizando una
-                                máquina virtual para simular el entorno de ejecución. El proyecto consistió en la
-                                creación de una plataforma de gestión de transportes que facilita la administración de
-                                rutas, vehículos y operadores.></p>
-                        </article>
-
-                        <article>
-                            <h3 data-lang="freightSystem" Sistema de Gestión de Transporte de Mercancías></h3>
-                            <p data-lang="freightSystemText" Creación de un sistema integral de gestión de transporte
-                                para el control de la logística de mercancías, basado en un sistema de bases de datos
-                                con registros de choferes, entradas, salidas y viáticos.></p>
-                        </article>
-                    </section>
-                </div>
-
-                <!-- Columna 3: Certificados -->
-                <div class="column">
-                    <section id="certificados">
-                        <h2 data-lang="certificates" Certificados></h2>
-                        <article class="certificado">
-                            <a href="javascript:void(0);"
-                                onclick="abrirModal('Certificado en Ciberseguridad', 'Este certificado acredita habilidades avanzadas en ciberseguridad.', 'Imagenes/Certificado.jpg')">
-                                <img src="Imagenes/Certificado.jpg" alt="Certificado en Ciberseguridad"
-                                    class="certificado-img">
-                                <p data-lang="Cybersecurity" Ciberseguridad></p>
-                            </a>
-                        </article>
-                        <article class="certificado">
-                            <a href="javascript:void(0);"
-                                onclick="abrirModal('Certificado en Introducción a to LoT', 'Este certificado cubre temas fundamentales sobre el Internet de las Cosas (IoT) y su aplicación.', 'Imagenes/to Lot.jpg')">
-                                <img src="Imagenes/to Lot.jpg" alt="Certificado en Introducción a LoT"
-                                    class="certificado-img">
-                                <p data-lang="Introduction to IoT" Introducción a IoT></p>
-                            </a>
-                        </article>
-                        <article class="certificado">
-                            <a href="javascript:void(0);"
-                                onclick="abrirModal('Certificado en Introducción a la Ciencia de Datos', 'Este certificado avala conocimientos clave en Ciencia de Datos, abarcando técnicas avanzadas de análisis, manipulación y visualización de datos.', 'Imagenes/analisis de datos.jpg')">
-                                <img src="Imagenes/analisis de datos.jpg"
-                                    alt="Certificado en Introducción a ala Ciencia de Datos" class="certificado-img">
-                                <p data-lang="Introduction to Data Science" a la Ciencia de Datos></p>
-                            </a>
-                        </article>
-                    </section>
-
-                    <!-- Nuevo apartado: Intereses -->
-                    <section id="intereses">
-                        <h2 data-lang="interests" Intereses></h2>
-                        <div class="habilidad">
-                            <i class="fas fa-book"></i>
-                            <label for="leer" data-lang="Read">Leer</label>
-                            <progress id="leer" value="80" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-dumbbell"></i>
-                            <label for="ejercicio" data-lang="Exercise">Ejercicio</label>
-                            <progress id="ejercicio" value="70" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-music"></i>
-                            <label for="musica" data-lang="Music">Música</label>
-                            <progress id="musica" value="90" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-laptop-code"></i>
-                            <label for="programas" data-lang="Programmes">Programas</label>
-                            <progress id="programas" value="85" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <label for="cursos" data-lang="Courses">Cursos</label>
-                            <progress id="cursos" value="75" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-language"></i>
-                            <label for="ingles" data-lang="English">Inglés</label>
-                            <progress id="ingles" value="40" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-briefcase"></i>
-                            <label for="trabajo" data-lang="Work">Trabajo</label>
-                            <progress id="trabajo" value="90" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-paint-brush"></i>
-                            <label for="arte" data-lang="Art">Arte</label>
-                            <progress id="arte" value="60" max="100"></progress>
-                        </div>
-                        <div class="habilidad">
-                            <i class="fas fa-users"></i>
-                            <label for="familia" data-lang="Family">Familia</label>
-                            <progress id="familia" value="100" max="100"></progress>
-                        </div>
-                    </section>
-
-                    <!-- Nuevo apartado: Habilidades en Desarrollo -->
-                    <section id="habilidades-en-desarrollo">
-                        <h2 data-lang="developingSkills" Habilidades en Desarrollo></h2>
-                        <ul data-lang="developingSkillsText" habilidades-desarrollo-lista>
-                            <li data-lang="flutter">Flutter avanzado para aplicaciones móviles.</li>
-                            <li data-lang="docker">Docker y Kubernetes para la gestión de contenedores.</li>
-                            <li data-lang="python">Análisis de datos con Python.</li>
-                            <li data-lang="scrum">Implementación de metodologías ágiles (Scrum).</li>
-                            <li data-lang="uiux">Diseño UI/UX para mejorar la experiencia de usuario.</li>
-                        </ul>
-                    </section>
-
-                    <!-- Apartado de Código QR dentro de la columna -->
-                    <section id="codigo-qr">
-                        <h2 data-lang="qrCode" Código QR></h2>
-                        <p data-lang="qrCodeText" Escanea el siguiente código para ver mi dirección.></p>
-                        <div id="qr-container">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?data=Calle%20Independencia%52,%20SanFelipeTlalmimilolpan,%20Toluca&size=300x300"
-                                alt="Código QR">
-                        </div>
-                    </section>
-                </div>
-                <!-- Nuevo apartado: Términos y Condiciones y Copyright -->
-                <footer class="footer-cv">
-                    <section id="terminos-condiciones">
-                        <h2 data-lang="Terms&Conditions" Términos y Condiciones></h2>
-                        <p data-lang="Terms & ConditionsText" Este CV y la información proporcionada son únicamente para
-                            propósitos de revisión profesional. La reproducción o uso no autorizado de la información
-                            aquí contenida está prohibida.></p>
-                    </section>
-
-                    <section id="copyright">
-                        <p data-lang="copyrightText" © 2024 Jesús Adrián Molina Hernández. Todos los derechos
-                            reservados.>
-                        </p>
-                    </section>
-                    <div
-                        style="text-align: center; margin-top: 05px; font-family: 'Roboto', sans-serif; font-size: 10px; color: #333;">
-                        <p>Si necesitas una copia en PDF, <a href="mailto:jeshuamolina24@gmail.com"
-                                style="color: #4CAF50; text-decoration: none;">contáctame</a> y te enviaré una versión
-                            profesional.</p>
-
+                <!-- Nuevo apartado: Intereses -->
+                <section id="intereses">
+                    <h2 data-lang="interests" Intereses></h2>
+                    <div class="habilidad">
+                        <i class="fas fa-book"></i>
+                        <label for="leer" data-lang="Read">Leer</label>
+                        <progress id="leer" value="80" max="100"></progress>
                     </div>
-
-                </footer>
-                <!-- Botones de muestra para abrir el modal con imagen, título y descripción -->
-                <div
-                    onclick="abrirModal('Certificado en Introducción a LoT', 'Este es un resumen del certificado en Introducción a LoT.', 'Imagenes/to Lot.jpg')">
-                </div>
-                <div
-                    onclick="abrirModal('Certificado de Ciberseguridad', 'Este es un resumen del certificado de ciberseguridad.', 'Imagenes/Certificado.jpg')">
-                </div>
-                <div
-                    onclick="abrirModal('Certificado de analisis de Datos', 'Este es un resumen del certificado de ciberseguridad.', 'Imagenes/analisis de datos.jpg')">
-                </div>
-
-                <!-- Modal para mostrar el resumen del certificado y la imagen -->
-                <div id="modalCertificado" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="cerrarModal()">&times;</span>
-                        <h2 id="modalTitle">Título del Certificado</h2>
-                        <img id="modalImage" src="" alt="Imagen del Certificado"
-                            style="inline-size: 100%; max-inline-size: 400px; display: block; margin: 0 auto;">
-                        <p id="modalDescription">Aquí aparecerá un breve resumen del certificado.</p>
+                    <div class="habilidad">
+                        <i class="fas fa-dumbbell"></i>
+                        <label for="ejercicio" data-lang="Exercise">Ejercicio</label>
+                        <progress id="ejercicio" value="70" max="100"></progress>
                     </div>
+                    <div class="habilidad">
+                        <i class="fas fa-music"></i>
+                        <label for="musica" data-lang="Music">Música</label>
+                        <progress id="musica" value="90" max="100"></progress>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fas fa-laptop-code"></i>
+                        <label for="programas" data-lang="Programmes">Programas</label>
+                        <progress id="programas" value="85" max="100"></progress>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <label for="cursos" data-lang="Courses">Cursos</label>
+                        <progress id="cursos" value="75" max="100"></progress>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fas fa-language"></i>
+                        <label for="ingles" data-lang="English">Inglés</label>
+                        <progress id="ingles" value="40" max="100"></progress>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fas fa-briefcase"></i>
+                        <label for="trabajo" data-lang="Work">Trabajo</label>
+                        <progress id="trabajo" value="90" max="100"></progress>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fas fa-paint-brush"></i>
+                        <label for="arte" data-lang="Art">Arte</label>
+                        <progress id="arte" value="60" max="100"></progress>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fas fa-users"></i>
+                        <label for="familia" data-lang="Family">Familia</label>
+                        <progress id="familia" value="100" max="100"></progress>
+                    </div>
+                </section>
+
+                <!-- Nuevo apartado: Habilidades en Desarrollo -->
+                <section id="habilidades-en-desarrollo">
+                    <h2 data-lang="developingSkills" Habilidades en Desarrollo></h2>
+                    <ul data-lang="developingSkillsText" habilidades-desarrollo-lista>
+                        <li data-lang="flutter">Flutter avanzado para aplicaciones móviles.</li>
+                        <li data-lang="docker">Docker y Kubernetes para la gestión de contenedores.</li>
+                        <li data-lang="python">Análisis de datos con Python.</li>
+                        <li data-lang="scrum">Implementación de metodologías ágiles (Scrum).</li>
+                        <li data-lang="uiux">Diseño UI/UX para mejorar la experiencia de usuario.</li>
+                    </ul>
+                </section>
+
+                <!-- Apartado de Código QR dentro de la columna -->
+                <section id="codigo-qr">
+                    <h2 data-lang="qrCode" Código QR></h2>
+                    <p data-lang="qrCodeText" Escanea el siguiente código para ver mi dirección.></p>
+                    <div id="qr-container">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=Calle%20Independencia%52,%20SanFelipeTlalmimilolpan,%20Toluca&size=300x300"
+                            alt="Código QR">
+                    </div>
+                </section>
+            </div>
+            <!-- Nuevo apartado: Términos y Condiciones y Copyright -->
+            <footer class="footer-cv">
+                <section id="terminos-condiciones">
+                    <h2 data-lang="Terms&Conditions" Términos y Condiciones></h2>
+                    <p data-lang="Terms & ConditionsText" Este CV y la información proporcionada son únicamente para
+                        propósitos de revisión profesional. La reproducción o uso no autorizado de la información aquí
+                        contenida está prohibida.></p>
+                </section>
+
+                <section id="copyright">
+                    <p data-lang="copyrightText" © 2024 Jesús Adrián Molina Hernández. Todos los derechos reservados.>
+                    </p>
+                </section>
+                <div style="text-align: center; margin-top: 05px; font-family: 'Roboto', sans-serif; font-size: 10px; color: #333;">
+                    <p>Si necesitas una copia en PDF, <a href="mailto:jeshuamolina24@gmail.com" style="color: #4CAF50; text-decoration: none;">contáctame</a> y te enviaré una versión profesional.</p>
+
                 </div>
+                
+            </footer>      
+            <!-- Botones de muestra para abrir el modal con imagen, título y descripción -->
+            <div
+                onclick="abrirModal('Certificado en Introducción a LoT', 'Este es un resumen del certificado en Introducción a LoT.', 'Imagenes/to Lot.jpg')">
+            </div>
+            <div
+                onclick="abrirModal('Certificado de Ciberseguridad', 'Este es un resumen del certificado de ciberseguridad.', 'Imagenes/Certificado.jpg')">
+            </div>
+            <div
+                onclick="abrirModal('Certificado de analisis de Datos', 'Este es un resumen del certificado de ciberseguridad.', 'Imagenes/analisis de datos.jpg')">
+            </div>
+
+            <!-- Modal para mostrar el resumen del certificado y la imagen -->
+            <div id="modalCertificado" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="cerrarModal()">&times;</span>
+                    <h2 id="modalTitle">Título del Certificado</h2>
+                    <img id="modalImage" src="" alt="Imagen del Certificado"
+                        style="inline-size: 100%; max-inline-size: 400px; display: block; margin: 0 auto;">
+                    <p id="modalDescription">Aquí aparecerá un breve resumen del certificado.</p>
+                </div>
+            </div>
 
 
-                <!-- Partículas en el fondo -->
-                <div id="particles-js"></div>
-                <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-                <script>
-                    particlesJS('particles-js', {
-                        "particles": {
-                            "number": {
-                                "value": 60,  // Menos partículas para un efecto más sutil
-                                "density": {
-                                    "enable": true,
-                                    "value_area": 800
-                                }
-                            },
-                            "color": {
-                                "value": "#b3c7e6"  // Color suave en azul
-                            },
-                            "shape": {
-                                "type": "circle"
-                            },
-                            "size": {
-                                "value": 3  // Tamaño pequeño para no distraer
-                            },
-                            "move": {
-                                "speed": 0.5  // Movimiento muy lento para un efecto relajante
+            <!-- Partículas en el fondo -->
+            <div id="particles-js"></div>
+            <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+            <script>
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 60,  // Menos partículas para un efecto más sutil
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
                             }
                         },
-                        "interactivity": {
-                            "detect_on": "window",
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "repulse"  // Efecto al pasar el mouse
-                                }
+                        "color": {
+                            "value": "#b3c7e6"  // Color suave en azul
+                        },
+                        "shape": {
+                            "type": "circle"
+                        },
+                        "size": {
+                            "value": 3  // Tamaño pequeño para no distraer
+                        },
+                        "move": {
+                            "speed": 0.5  // Movimiento muy lento para un efecto relajante
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "window",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"  // Efecto al pasar el mouse
                             }
                         }
-                    });
-                </script>
-                <script src="Certificados.js"></script>
+                    }
+                });
+            </script>
+            <script src="Certificados.js"></script>
 </body>
 
 </html>
