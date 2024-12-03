@@ -38,16 +38,12 @@
     </div>
 
     <!-- Login -->
-    <div id="login-container" style="display: none;">
-        <button id="close-login" onclick="closeLogin()">X</button>
-        <h1>Acceso Autenticado</h1>
-        <form id="login-form" onsubmit="authenticateUser(event)">
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" placeholder="Introduce la contraseña" required>
-            <button type="submit">Entrar</button>
-        </form>
-        <p id="error-message" style="color: red; display: none;">Contraseña incorrecta. Intenta nuevamente.</p>
-    </div>
+    <form id="accessForm">
+        <label for="email">Correo electrónico de la empresa:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Solicitar acceso</button>
+      </form>
+      <p id="message"></p>
 
     <!-- Animación Lottie -->
     <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"

@@ -116,24 +116,42 @@ function authenticateUser(event) {
     }
 }
 
-// Función para manejar el botón "Explorar mi CV"
-function redirectToCV() {
-    const isAuthenticated = sessionStorage.getItem('authenticated');
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
-    if (isAuthenticated) {
-        // Redirigir al CV
-        window.location.href = "cv.html";
-    } else {
-        // Si no está autenticado, mostrar el formulario de inicio de sesión
-        alert("Por favor, inicia sesión para explorar tu CV.");
-        document.getElementById('welcome-screen').style.display = "none";
-        document.getElementById('login-container').style.display = "block";
-    }
-}
+const form = document.getElementById("accessForm");
+const message = document.getElementById("message");
 
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-// Función para cerrar el formulario de login
-function closeLogin() {
-    document.getElementById('login-container').style.display = 'none';
+  const email = form.email.value;
+  const password = Math.random().toString(36).substring(2, 10); // Generar contraseña aleatoria
+  const expirationTime = new Date();
+  expirationTime.setHours(expirationTime.getHours() + 24); // Validez de 24 horas
+
+  const db = getDatabase();
+  const dbRef = ref(db, "contraseñas/" + password);
+
+  try {
+    await set(dbRef, {
+      email: email,
+      expirationTime: expirationTime.toISOString(),
+    });
+
+    message.innerText = `Acceso generado para ${email}. Contraseña temporal: ${password}`;
+    form.reset();
+
+    // Aquí puedes integrar un servicio para enviar el correo
+    // Ejemplo: enviarCorreo(email, password);
+    async function enviarCorreo(email, password) {
+        // Configura un servicio de envío de correo como SendGrid o Gmail aquí
+        console.log(`Correo enviado a ${email} con contraseña: ${password}`);
+      }
+      
+  } catch (error) {
+    console.error("Error al registrar acceso:", error);
+    message.innerText = "Ocurrió un error. Inténtalo nuevamente.";
   }
+});
+
   
