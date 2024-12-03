@@ -114,3 +114,35 @@ console.log(btoa("7223326217"));
 console.log(btoa("https://www.linkedin.com/in/tu_cuenta_de_linkedin"));
 console.log(btoa("mailto:jesususuario@outlook.com"));
 console.log(btoa("https://www.facebook.com/jesususuario"));
+
+// Manejador para el botón "Explorar mi CV"
+document.getElementById('explore-cv-btn').addEventListener('click', () => {
+    // Ocultar la sección de bienvenida
+    document.getElementById('welcome-container').style.display = 'none';
+  
+    // Mostrar la sección de inicio de sesión
+    document.getElementById('login-container').style.display = 'block';
+  });
+  
+  // Función para autenticar al usuario
+  document.getElementById('login').addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    const passwordInput = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+  
+    // Contraseña segura (puedes cambiarla aquí)
+    const correctPassword = "mi_contraseña_secreta";
+  
+    if (passwordInput === correctPassword) {
+      // Contraseña correcta: almacenar estado en sessionStorage
+      sessionStorage.setItem('authenticated', true);
+  
+      // Redirigir al CV
+      window.location.href = "cv.html";
+    } else {
+      // Mostrar mensaje de error
+      errorMessage.style.display = 'block';
+    }
+  });
+  

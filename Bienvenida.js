@@ -61,35 +61,79 @@ function toggleTheme() {
 // Deshabilitar clic derecho
 document.addEventListener('contextmenu', (event) => {
     event.preventDefault();
-  });
-  
-  // Deshabilitar selección de texto
-  document.addEventListener('selectstart', (event) => {
+});
+
+// Deshabilitar selección de texto
+document.addEventListener('selectstart', (event) => {
     event.preventDefault();
-  });
-  
-  // Deshabilitar arrastre de imágenes
-  document.addEventListener('dragstart', (event) => {
+});
+
+// Deshabilitar arrastre de imágenes
+document.addEventListener('dragstart', (event) => {
     event.preventDefault();
-  });
+});
 
 
 // Generar partículas al cargar la página
 window.onload = generateParticles;
-  // Deshabilitar clic derecho, selección de texto y arrastre de imágenes
-  document.addEventListener('contextmenu', (event) => { event.preventDefault(); });
-  document.addEventListener('selectstart', (event) => { event.preventDefault(); });
-  document.addEventListener('dragstart', (event) => { event.preventDefault(); });
-  
-  // Ofuscación de datos sensibles
-  document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
-  document.getElementById('phone').innerHTML = atob("NzIyMzMyNjIxNw=="); // Número de WhatsApp
-  document.getElementById('linkedin').href = atob("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL3R1X2N1ZW50YV9kZV9saW5rZWQ="); // Perfil LinkedIn
-  document.getElementById('outlook').href = atob("bWFpbHRvOmplc3VzdXN1YXJpb0BvdXRsb29rLmNvbQ=="); // Correo Outlook
-  document.getElementById('facebook').href = atob("aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2plc3VzdXN1YXJpbw=="); // Perfil Facebook
-  document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
-  console.log(btoa("7223326217"));
-  console.log(btoa("https://www.linkedin.com/in/tu_cuenta_de_linkedin"));
-  console.log(btoa("mailto:jesususuario@outlook.com"));
-  console.log(btoa("https://www.facebook.com/jesususuario"));
+// Deshabilitar clic derecho, selección de texto y arrastre de imágenes
+document.addEventListener('contextmenu', (event) => { event.preventDefault(); });
+document.addEventListener('selectstart', (event) => { event.preventDefault(); });
+document.addEventListener('dragstart', (event) => { event.preventDefault(); });
+
+// Ofuscación de datos sensibles
+document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
+document.getElementById('phone').innerHTML = atob("NzIyMzMyNjIxNw=="); // Número de WhatsApp
+document.getElementById('linkedin').href = atob("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL3R1X2N1ZW50YV9kZV9saW5rZWQ="); // Perfil LinkedIn
+document.getElementById('outlook').href = atob("bWFpbHRvOmplc3VzdXN1YXJpb0BvdXRsb29rLmNvbQ=="); // Correo Outlook
+document.getElementById('facebook').href = atob("aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2plc3VzdXN1YXJpbw=="); // Perfil Facebook
+document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
+console.log(btoa("7223326217"));
+console.log(btoa("https://www.linkedin.com/in/tu_cuenta_de_linkedin"));
+console.log(btoa("mailto:jesususuario@outlook.com"));
+console.log(btoa("https://www.facebook.com/jesususuario"));
+
+// Maneja la autenticación
+function authenticateUser(event) {
+    event.preventDefault(); // Previene la recarga de la página al enviar el formulario
+
+    const passwordInput = document.getElementById('password').value;
+
+    // Contraseña válida
+    const validPassword = "j8z%N7X@9k#HqP&2!T$CvM4wLpBd^"; // Cambia esto por tu contraseña
+
+    if (passwordInput === validPassword) {
+        // Guardar autenticación en sessionStorage
+        sessionStorage.setItem('authenticated', true);
+
+        // Ocultar el formulario de inicio de sesión y mostrar la pantalla principal
+        document.getElementById('login-container').style.display = "none";
+        document.getElementById('welcome-screen').style.display = "block";
+    } else {
+        // Mostrar mensaje de error
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.style.display = "block";
+    }
+}
+
+// Función para manejar el botón "Explorar mi CV"
+function redirectToCV() {
+    const isAuthenticated = sessionStorage.getItem('authenticated');
+
+    if (isAuthenticated) {
+        // Redirigir al CV
+        window.location.href = "cv.html";
+    } else {
+        // Si no está autenticado, mostrar el formulario de inicio de sesión
+        alert("Por favor, inicia sesión para explorar tu CV.");
+        document.getElementById('welcome-screen').style.display = "none";
+        document.getElementById('login-container').style.display = "block";
+    }
+}
+
+
+// Función para cerrar el formulario de login
+function closeLogin() {
+    document.getElementById('login-container').style.display = 'none';
+  }
   

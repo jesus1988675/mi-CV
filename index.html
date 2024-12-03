@@ -8,31 +8,8 @@
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="bienvenida.css">
 </head>
-<script>
-    // Cargar el archivo JSON de traducciones
-    async function loadLanguage(language) {
-        const response = await fetch('languages.json');
-        const translations = await response.json();
-        const languageData = translations[language];
-
-        // Actualizar el contenido de la página con las traducciones
-        const elements = document.querySelectorAll('[data-lang]');
-        elements.forEach(element => {
-            const langKey = element.getAttribute('data-lang');
-            if (languageData[langKey]) {
-                element.textContent = languageData[langKey];
-            }
-        });
-    }
-
-    // Cambiar el idioma al hacer click en el botón
-    function changeLanguage(language) {
-        loadLanguage(language);
-    }
-</script>
 
 <body>
-
     <!-- Pantalla de bienvenida -->
     <div id="welcome-screen">
         <div class="welcome-content">
@@ -42,47 +19,41 @@
                 <div id="language-options">
                     <button onclick="changeLanguage('es')">Español</button>
                     <button onclick="changeLanguage('en')">English</button>
-                    <button onclick="changeLanguage('fr')">Français</button>
-                    <button onclick="changeLanguage('de')">Deutsch</button>
-                    <button onclick="changeLanguage('it')">Italiano</button>
-                    <button onclick="changeLanguage('pt')">Português</button>
-                    <button onclick="changeLanguage('nl')">Nederlands</button>
-                    <button onclick="changeLanguage('ru')">Русский</button>
-                    <button onclick="changeLanguage('ja')">日本語</button>
-                    <button onclick="changeLanguage('zh')">中文</button>
-                    <button onclick="changeLanguage('ar')">العربية</button>
+                    <!-- Añade más idiomas si es necesario -->
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Botón de cambio de tema -->
     <div id="theme-toggle">
         <button id="toggle-btn" onclick="toggleTheme()">💡</button>
     </div>
+
+    <!-- Contenido de bienvenida -->
     <div class="welcome-content">
-        <!-- Título de bienvenida -->
-        <h1 id="welcome-title" data-lang="welcomeTitle">
-            ¡Bienvenido a mi Portafolio!<span class="typing-cursor"></span>
-        </h1>
-    
-        <!-- Texto de descripción -->
-        <p id="welcome-text" data-lang="welcomeText">
-            Explora mi experiencia y proyectos destacados en ingeniería en sistemas.<span class="typing-cursor"></span>
-        </p>
-    
-        <!-- Botón para explorar el CV -->
-        <button 
-            class="neumorphic-button" 
-            onclick="redirectToCV()" 
-            data-lang="exploreCV">
-            Explorar mi CV
-        </button>
+        <h1 id="welcome-title" data-lang="welcomeTitle">¡Bienvenido a mi Portafolio!</h1>
+        <p id="welcome-text" data-lang="welcomeText">Explora mi experiencia y proyectos destacados en ingeniería en sistemas.</p>
+        <button class="neumorphic-button" onclick="redirectToCV()" data-lang="exploreCV">Explorar mi CV</button>
     </div>
-    
+
+    <!-- Login -->
+    <div id="login-container" style="display: none;">
+        <button id="close-login" onclick="closeLogin()">X</button>
+        <h1>Acceso Autenticado</h1>
+        <form id="login-form" onsubmit="authenticateUser(event)">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Introduce la contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Contraseña incorrecta. Intenta nuevamente.</p>
+    </div>
 
     <!-- Animación Lottie -->
     <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"
         background="transparent" speed="1" loop autoplay></dotlottie-player>
-    </div>
+    
+    <!-- Partículas -->
     <div id="particles"></div>
 
     <script src="Bienvenida.js"></script>
