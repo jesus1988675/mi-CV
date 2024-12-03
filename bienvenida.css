@@ -563,7 +563,7 @@ body.dark .neumorphic-button {
 }
 
 body::before {
-    content: "© 2024 - Jesus Adrian MOlina Hernandez";
+    content: "© 2024 - Jesus Adrian Molina Hernandez";
     position: fixed;
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.1); /* Semitransparente */
