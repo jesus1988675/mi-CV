@@ -72,8 +72,15 @@
         "Art": "Art",
         "Family": "Family",
         "welcomeTitle": "Welcome to my Portfolio!",
-        "welcomeText": "Explore my experience and highlighted projects in systems engineering.",
-        "exploreCV": "Explore my CV"
+        "welcomeText": "Explore my experience and featured projects in systems engineering.",
+        "exploreCV": "Explore my CV",
+        "password-label": "Password:",
+        "confirm-button": "Confirm",
+        "incorrect-password": "Incorrect password. Please try again.",
+        "no-password": "Don't have a password?",
+        "contact-whatsapp": "Contact me on WhatsApp",
+        "close-button": "Close",
+        "access-authenticated": "Authenticated Access"
     },
     "es": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -149,7 +156,14 @@
         "Family": "Familia",
         "welcomeTitle": "¡Bienvenido a mi Portafolio!",
         "welcomeText": "Explora mi experiencia y proyectos destacados en ingeniería en sistemas.",
-        "exploreCV": "Explorar mi CV"
+        "exploreCV": "Explorar mi CV",
+        "password-label": "Contraseña:",
+        "confirm-button": "Confirmar",
+        "incorrect-password": "Contraseña incorrecta. Intenta nuevamente.",
+        "no-password": "¿No tienes una contraseña?",
+        "contact-whatsapp": "Contáctame por WhatsApp",
+        "close-button": "Cerrar",
+        "access-authenticated": "Acceso Autenticado"
     },
     "fr": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -224,8 +238,15 @@
         "Art": "Art",
         "Family": "Famille",
         "welcomeTitle": "Bienvenue sur mon Portfolio!",
-        "welcomeText": "Explorez mon expérience et mes projets phares en ingénierie des systèmes.",
-        "exploreCV": "Explorer mon CV"
+        "welcomeText": "Explorez mon expérience et mes projets phares en génie des systèmes.",
+        "exploreCV": "Explorer mon CV",
+        "password-label": "Mot de passe:",
+        "confirm-button": "Confirmer",
+        "incorrect-password": "Mot de passe incorrect. Essayez à nouveau.",
+        "no-password": "Vous n'avez pas de mot de passe?",
+        "contact-whatsapp": "Contactez-moi sur WhatsApp",
+        "close-button": "Fermer",
+        "access-authenticated": "Accès authentifié"
     },
     "de": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -300,8 +321,15 @@
         "Art": "Kunst",
         "Family": "Familie",
         "welcomeTitle": "Willkommen in meinem Portfolio!",
-        "welcomeText": "Erkunden Sie meine Erfahrung und hervorgehobene Projekte in der Systemtechnik.",
-        "exploreCV": "Erkunde meinen Lebenslauf"
+        "welcomeText": "Erkunden Sie meine Erfahrungen und herausragende Projekte in der Systemtechnik.",
+        "exploreCV": "Mein CV ansehen",
+        "password-label": "Passwort:",
+        "confirm-button": "Bestätigen",
+        "incorrect-password": "Falsches Passwort. Bitte versuche es erneut.",
+        "no-password": "Hast du kein Passwort?",
+        "contact-whatsapp": "Kontaktiere mich über WhatsApp",
+        "close-button": "Schließen",
+        "access-authenticated": "Authentifizierter Zugang"
     },
     "it": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -376,8 +404,15 @@
         "Art": "Arte",
         "Family": "Famiglia",
         "welcomeTitle": "Benvenuto nel mio Portfolio!",
-        "welcomeText": "Esplora la mia esperienza e i progetti evidenziati nell'ingegneria dei sistemi.",
-        "exploreCV": "Esplora il mio CV"
+        "welcomeText": "Esplora la mia esperienza e i progetti in evidenza nell'ingegneria dei sistemi.",
+        "exploreCV": "Esplora il mio CV",
+        "password-label": "Password:",
+        "confirm-button": "Conferma",
+        "incorrect-password": "Password errata. Riprova.",
+        "no-password": "Non hai una password?",
+        "contact-whatsapp": "Contattami su WhatsApp",
+        "close-button": "Chiudi",
+        "access-authenticated": "Accesso autenticato"
     },
     "pt": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -453,7 +488,14 @@
         "Family": "Família",
         "welcomeTitle": "Bem-vindo ao meu Portfólio!",
         "welcomeText": "Explore minha experiência e projetos destacados em engenharia de sistemas.",
-        "exploreCV": "Explore meu CV"
+        "exploreCV": "Explorar meu CV",
+        "password-label": "Senha:",
+        "confirm-button": "Confirmar",
+        "incorrect-password": "Senha incorreta. Tente novamente.",
+        "no-password": "Não tem uma senha?",
+        "contact-whatsapp": "Entre em contato comigo pelo WhatsApp",
+        "close-button": "Fechar",
+        "access-authenticated": "Acesso autenticado"
     },
     "nl": {
         "nombre": "Jesús Adrián Molina Hernández",
@@ -528,8 +570,15 @@
         "Art": "Kunst",
         "Family": "Familie",
         "welcomeTitle": "Welkom op mijn Portfolio!",
-        "welcomeText": "Ontdek mijn ervaring en uitgelichte projecten in systeemtechniek.",
-        "exploreCV": "Bekijk mijn CV"
+        "welcomeText": "Verken mijn ervaring en uitgelichte projecten in systeemtechniek.",
+        "exploreCV": "Verken mijn CV",
+        "password-label": "Wachtwoord:",
+        "confirm-button": "Bevestigen",
+        "incorrect-password": "Verkeerd wachtwoord. Probeer het opnieuw.",
+        "no-password": "Heb je geen wachtwoord?",
+        "contact-whatsapp": "Neem contact met me op via WhatsApp",
+        "close-button": "Sluiten",
+        "access-authenticated": "Geauthenticeerde toegang"
     },
     "ru": {
         "nombre": "Хесус Адриан Молина Эрнандес",
@@ -605,7 +654,14 @@
         "Family": "Семья",
         "welcomeTitle": "Добро пожаловать в мое портфолио!",
         "welcomeText": "Изучите мой опыт и выделенные проекты в области системной инженерии.",
-        "exploreCV": "Ознакомьтесь с моим резюме"
+        "exploreCV": "Изучить мое резюме",
+        "password-label": "Пароль:",
+        "confirm-button": "Подтвердить",
+        "incorrect-password": "Неверный пароль. Попробуйте снова.",
+        "no-password": "У вас нет пароля?",
+        "contact-whatsapp": "Свяжитесь со мной через WhatsApp",
+        "close-button": "Закрыть",
+        "access-authenticated": "Аутентифицированный доступ"
     },
     "ja": {
         "nombre": "ヘスス・アドリアン・モリナ・エルナンデス",
@@ -679,9 +735,16 @@
         "Work": "仕事",
         "Art": "アート",
         "Family": "家族",
-        "welcomeTitle": "私のポートフォリオへようこそ！",
-        "welcomeText": "システムエンジニアリングの経験とハイライトされたプロジェクトを探索してください。",
-        "exploreCV": "私の履歴書を探る"
+        "welcomeTitle": "私のポートフォリオへようこそ!",
+        "welcomeText": "システムエンジニアリングの経験と注目のプロジェクトを探索してください。",
+        "exploreCV": "私の履歴書を見る",
+        "password-label": "パスワード:",
+        "confirm-button": "確認",
+        "incorrect-password": "パスワードが間違っています。再試行してください。",
+        "no-password": "パスワードがありませんか？",
+        "contact-whatsapp": "WhatsAppで連絡してください",
+        "close-button": "閉じる",
+        "access-authenticated": "認証済みアクセス"
     },
     "zh": {
         "nombre": "赫苏斯·阿德里安·莫利纳·埃尔南德斯",
@@ -755,9 +818,16 @@
         "Work": "工作",
         "Art": "艺术",
         "Family": "家庭",
-        "welcomeTitle": "欢迎来到我的作品集！",
-        "welcomeText": "探索我在系统工程方面的经验和突出项目。",
-        "exploreCV": "探索我的简历"
+        "welcomeTitle": "欢迎来到我的作品集!",
+        "welcomeText": "探索我在系统工程方面的经验和特色项目。",
+        "exploreCV": "探索我的简历",
+        "password-label": "密码:",
+        "confirm-button": "确认",
+        "incorrect-password": "密码错误。请再试一次。",
+        "no-password": "没有密码？",
+        "contact-whatsapp": "通过WhatsApp与我联系",
+        "close-button": "关闭",
+        "access-authenticated": "认证访问"
     },
     "ar": {
         "nombre": "خيسوس أدريان مولينا إرنانديس",
@@ -831,8 +901,15 @@
         "Work": "العمل",
         "Art": "فن",
         "Family": "عائلة",
-        "welcomeTitle": "مرحباً بكم في محفظتي!",
-        "welcomeText": "استعرض خبرتي ومشاريعي البارزة في هندسة النظم.",
-        "exploreCV": "استعراض سيرتي الذاتية"
+        "welcomeTitle": "مرحبًا بك في محفظتي!",
+        "welcomeText": "استعرض خبرتي ومشاريعي المميزة في هندسة الأنظمة.",
+        "exploreCV": "استعرض سيرتي الذاتية",
+        "password-label": "كلمة المرور:",
+        "confirm-button": "تأكيد",
+        "incorrect-password": "كلمة المرور غير صحيحة. حاول مرة أخرى.",
+        "no-password": "لا تمتلك كلمة مرور؟",
+        "contact-whatsapp": "تواصل معي عبر WhatsApp",
+        "close-button": "إغلاق",
+        "access-authenticated": "الوصول المصادق عليه"
     }
 }

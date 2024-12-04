@@ -719,11 +719,11 @@ body::before {
     content: "© 2024 - Jesus Adrian Molina Hernandez";
     position: fixed;
     font-size: 2rem;
-    color: rgba(255, 255, 255, 0.1); /* Semitransparente */
+    color: rgba(255, 255, 255, 0.1);
+    /* Semitransparente */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     pointer-events: none;
-  }
-  
+}

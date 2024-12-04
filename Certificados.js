@@ -24,7 +24,7 @@ function cerrarModal() {
 }
 
 // Cerrar el modal al hacer clic fuera del contenido
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById('modalCertificado');
     if (event.target === modal) {
         cerrarModal();
@@ -87,18 +87,18 @@ document.addEventListener("click", (event) => {
 // Deshabilitar clic derecho
 document.addEventListener('contextmenu', (event) => {
     event.preventDefault();
-  });
-  
-  // Deshabilitar selección de texto
-  document.addEventListener('selectstart', (event) => {
+});
+
+// Deshabilitar selección de texto
+document.addEventListener('selectstart', (event) => {
     event.preventDefault();
-  });
-  
-  // Deshabilitar arrastre de imágenes
-  document.addEventListener('dragstart', (event) => {
+});
+
+// Deshabilitar arrastre de imágenes
+document.addEventListener('dragstart', (event) => {
     event.preventDefault();
-  });
-  // Deshabilitar clic derecho, selección de texto y arrastre de imágenes
+});
+// Deshabilitar clic derecho, selección de texto y arrastre de imágenes
 document.addEventListener('contextmenu', (event) => { event.preventDefault(); });
 document.addEventListener('selectstart', (event) => { event.preventDefault(); });
 document.addEventListener('dragstart', (event) => { event.preventDefault(); });
@@ -119,30 +119,29 @@ console.log(btoa("https://www.facebook.com/jesususuario"));
 document.getElementById('explore-cv-btn').addEventListener('click', () => {
     // Ocultar la sección de bienvenida
     document.getElementById('welcome-container').style.display = 'none';
-  
+
     // Mostrar la sección de inicio de sesión
     document.getElementById('login-container').style.display = 'block';
-  });
-  
-  // Función para autenticar al usuario
-  document.getElementById('login').addEventListener('submit', (event) => {
+});
+
+// Función para autenticar al usuario
+document.getElementById('login').addEventListener('submit', (event) => {
     event.preventDefault();
-  
+
     const passwordInput = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
-  
+
     // Contraseña segura (puedes cambiarla aquí)
     const correctPassword = "mi_contraseña_secreta";
-  
+
     if (passwordInput === correctPassword) {
-      // Contraseña correcta: almacenar estado en sessionStorage
-      sessionStorage.setItem('authenticated', true);
-  
-      // Redirigir al CV
-      window.location.href = "cv.html";
+        // Contraseña correcta: almacenar estado en sessionStorage
+        sessionStorage.setItem('authenticated', true);
+
+        // Redirigir al CV
+        window.location.href = "cv.html";
     } else {
-      // Mostrar mensaje de error
-      errorMessage.style.display = 'block';
+        // Mostrar mensaje de error
+        errorMessage.style.display = 'block';
     }
-  });
-  
+});

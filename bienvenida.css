@@ -566,54 +566,50 @@ body::before {
     content: "© 2024 - Jesus Adrian Molina Hernandez";
     position: fixed;
     font-size: 2rem;
-    color: rgba(255, 255, 255, 0.1); /* Semitransparente */
+    color: rgba(255, 255, 255, 0.1);
+    /* Semitransparente */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     pointer-events: none;
-  }
-  
-/* Estilos del formulario de inicio de sesión */
-#login-container {
-    display: none; /* Oculto por defecto */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    position: fixed; /* Centrado absoluto en toda la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-  }
-  
-  #login-form {
-    background: 0 8px 16px rgba(255, 255, 255, 0.925); /* Sombra para efecto flotante */
+}
+
+
+
+/* Estilo del formulario */
+#login-form {
+    background: rgba(255, 255, 255, 0.1);
+    /* Semitransparente */
     padding: 30px;
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Sombra para efecto flotante */
     width: 400px;
     max-width: 90%;
     text-align: center;
-    position: relative; /* Necesario para posicionar elementos como el botón de cierre */
-  }
-  
-  #login-form:hover {
-    transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
-  }
-  
-  #login-form label {
+    position: relative;
+    /* Para posicionar el botón de cerrar */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el cursor */
+#login-form:hover {
+    transform: translateY(-10px);
+}
+
+/* Etiquetas de texto */
+#login-form label {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
     display: block;
     color: #333;
-  }
-  
-  #login-form input {
+}
+
+/* Campos de entrada */
+#login-form input {
     width: 100%;
     padding: 12px;
     margin: 12px 0;
@@ -621,14 +617,17 @@ body::before {
     border-radius: 8px;
     font-size: 16px;
     background-color: #f9f9f9;
-  }
-  
-  #login-form input:focus {
+}
+
+#login-form input:focus {
     border-color: #0f4e91;
-    background-color: #ffffff;
-  }
-  
-  #login-form button {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semitransparente */
+    outline: none;
+}
+
+/* Botón de enviar */
+#login-form button {
     width: 100%;
     padding: 12px;
     background: #007bff;
@@ -638,51 +637,59 @@ body::before {
     font-size: 18px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  #login-form button:hover {
+}
+
+#login-form button:hover {
     background: #0056b3;
     transform: scale(1.05);
-  }
-  
-  #login-form button:active {
+}
+
+#login-form button:active {
     transform: scale(1);
-  }
-  
-  #error-message {
+}
+
+/* Mensaje de error */
+#error-message {
     margin-top: 15px;
     font-size: 14px;
     color: red;
-    display: none; /* Visible solo cuando hay un error */
-  }
-  
-  /* Estilo del botón de cerrar (X) */
-  #close-login {
+    display: none;
+    /* Visible solo cuando hay un error */
+}
+
+/* Botón de cerrar */
+#close-login {
     position: absolute;
-    top: 100px; /* Coloca el círculo por fuera del formulario */
-    right: 850px; /* Coloca el círculo por fuera del formulario */
-    background-color: #ff0000; /* Color de fondo rojo */
-    color: #ffffff; /* Color de la X blanca */
-    border-radius: 50%; /* Hace el botón circular */
-    width: 30px; /* Tamaño del botón */
-    height: 30px; /* Tamaño del botón */
-    font-size: 18px; /* Tamaño de la X */
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000;
+    /* Color de fondo rojo */
+    color: #ffffff;
+    /* Color de la X blanca */
+    border-radius: 50%;
+    /* Hace el botón circular */
+    width: 30px;
+    /* Tamaño del botón */
+    height: 30px;
+    /* Tamaño del botón */
+    font-size: 18px;
+    /* Tamaño de la X */
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #close-login:hover {
-    background-color: #cc0000; /* Cambio de color cuando se pasa el ratón */
-  }
-  
-  /* Diseño Responsivo */
-  @media (max-width: 768px) {
+}
+
+#close-login:hover {
+    background-color: #cc0000;
+    /* Cambio de color al pasar el ratón */
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
     #login-form {
-      width: 85%;
+        width: 65%;
     }
-  }
-  
+}
