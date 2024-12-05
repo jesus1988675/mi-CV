@@ -101,56 +101,27 @@ function authenticateUser(event) {
 
     // Contraseña válida
     const validPasswords = [
-        "G4#hT9&kLp@zX2$!M8N%7CvBdHqP^",
-        "L3p^N5@YqT9&kX7zH8%M4CvBd#W!",
-        "P&7kT9zHq@M4!N%2#CvLpG8X^Bd$",
-        "X!qP7%N5kLp9zH^M4CvT&@G8Bd#2$",
-        "M^8N7CvHq!z@P#G4kX2LpBd%T&9$",
-        "T&9LpM8Hq7z#CvN%X^k@G4Bd!P2$",
-        "kLp!N9T7G8CvHqM@P^2#zBd&X4%$",
-        "qT&kM8#N@zH9CvLpBd2!G7X^P%4$",
-        "N7kLp@P4!CvHqT9z%M2G8BdX^&#$",
-        "CvG2zM4N@7qP!Lp8T9Xk&^#H%Bd$",
-        "T!qP9Lp@kN7H8#M%2XzCvBd&G4^$",
-        "X4T&kLp7zHq@M!8N9%2CvBdG#P^$",
-        "P9kX@LpCv!N7H8qM#2Bd^T&Gz4%$",
-        "qP7k!Lp@zH8T9N^M2CvBd&G4X%#$",
-        "LpCvH8NqP7kT&z!@M#2X4Bd^G9%$",
-        "X&9zM2Lp@T!kHq7CvN^P4G8#Bd%$",
-        "TqP7kLp!zH8CvN2@G9Bd&^M4X#%$",
-        "qG7kLp8T9zCvH!@P#M4N2X^Bd&%$",
-        "Lp9zHqT@7Cv!P#N8Xk&^M2BdG4%$",
-        "Hq8T9zCv!P@M2N7#LpG4BdX^k&%$",
-        "M7CvBd&N8P!T4@zqG9LpH^X%2k#$",
-        "zHq@G8N9P!LpCvT4X^Bd2k&%M7#$",
-        "Cv7qG9T8N@LpBd&zH!P#X^M2k4%$",
-        "T!P9zHq@M7Cv2Bd^Lp&G8X4%Nk#$",
-        "qP8N9Lp7zT!@H#G2M4CvBd&X^k%$",
-        "N@T!G8kXzHqP9M7Cv2Bd^Lp&4%#$",
-        "T7H8kLp9zNqCv!M2BdX4&^P@G%#$",
-        "zHq7P9@G8M4Cv!T2BdN&Xk^Lp%#$",
-        "Hq9zCv!T7N8P@M2G4Bd&X^Lp%k#$",
-        "X^7N8zCvBdHqP9@M!T2Lp&Gk4%#$",
-        "N!9T7zCvG8XqM@P2BdH4^Lp&k%#$",
-        "H9kLpX@zqP!N7CvT2Bd^M8G4&%#$",
-        "q7zH9T!P@G8M2BdCvXk^LpN4&%#$",
-        "Lp9zqN7Cv!T8H2BdM4&^P@XGk%#$",
-        "P@M9zqT!7CvN8BdH4X^LpG2&k%#$",
-        "T!P9zqN7CvM8BdX^G4Lp&@H2k%#$",
-        "zHqP7T!9N8@G2BdCvX^LpM4&k%#$",
-        "H8T9N@M7zqCvBdP!X^LpG2&k4%#$",
-        "CvN9qP!7H@M8zT4Bd^LpX&k2G%#$",
-        "q7zH9T!P@G8N4BdM2Lp^X&Cv%k#$",
-        "H8T9M@N7zqP!CvX^Bd4&Lp2Gk%#$",
-        "T7qN9zH!Cv8BdM@P4Lp&X^2Gk%#$",
-        "zHqN7Cv!M9T8BdX@P4Lp&Gk2^%#$",
-        "Cv9zT@P!N7BdM8XH4&Lp^qG2k%#$",
-        "H7N9zCvP@T!M8BdX^Lp&Gq4k2%#$",
-        "zT!P9qH7N8CvM@Bd4Lp&X^2Gk%#$",
-        "qN7CvM8T9zH@P!BdLp&GX4k^2%#$",
-        "H7Cv!M8qT9zN@BdP4Lp^X&Gk2%#$",
-        "zHqN7T!M8CvP@Bd9X&Lp^Gk4%2#$",
-        "T!q7N9H@M8CvzBdLp&GX^k42P%#$"
+        "G4hT9kLpAzX2M8N7CvBdHqP",
+        "L3pN5YqT9kX7zH8M4CvBdW",
+        "P7kT9zHqM4N2CvLpG8BdX",
+        "XqP7N5kLp9zH4M8CvT2Bd",
+        "M8N7CvHqzP4kX2LpBdT9G",
+        "T9LpM8Hq7zCvN5XkP2BdG",
+        "kLp9T7G8CvHqM2P4zBdXN",
+        "qT8M7N2zH9CvLpBdX4kP",
+        "N7kLp4CvT9zHqP2BdX8G",
+        "CvG2zM4N7qP8LpX9kBdH",
+        "TqP7Lp8kN7H9M2XzCvBd",
+        "X4T7kLp7zHqN9M2CvBdG",
+        "P9kX2LpCvM7N8qBdT4H",
+        "qP7kLp8zH9T2N4CvBdX",
+        "LpCvH8N7qP2T9zX4BdM",
+        "X9zM2LpT7kHqP4CvBdN",
+        "TqP7zH8CvN9BdM2kLpX",
+        "qG7kLp8T9zCvH2M4BdN",
+        "Lp9zHqT7CvP4N8kM2Bd",
+        "Hq8T9zCvM2P7N4LpBdX"
+       
     ];
     console.log("Contraseña ingresada:", passwordInput); // Mensaje de depuración
 
@@ -178,7 +149,7 @@ function redirectToCV() {
         window.location.href = "cv.html";
     } else {
         // Si no está autenticado, mostrar el formulario de inicio de sesión
-        alert("Para obtener acceso al CV, por favor comunícate conmigo mediante WhatsApp haciendo clic en el enlace proporcionado en nuestra página. ¡Estare encantado de asistirte!");
+        alert("Para obtener acceso al CV, por favor comunícate conmigo mediante WhatsApp haciendo clic en el enlace proporcionado en mi página. ¡Estare encantado de asistirte!");
 
         document.getElementById('welcome-screen').style.display = "none";
         document.getElementById('login-container').style.display = "block";
@@ -189,6 +160,84 @@ function closeLoginContainer() {
     document.getElementById('login-container').style.display = 'none';
 }
 
+// Inicialización de Firebase
+// Configuración de Firebase
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    databaseURL: "YOUR_DATABASE_URL",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
 
+// Inicializar Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
+// Función para leer contraseñas desde Firebase
+function obtenerContraseñas() {
+    database
+        .ref("passwords")
+        .once("value")
+        .then((snapshot) => {
+            const passwords = snapshot.val();
+            console.log("Lista de contraseñas disponibles:", passwords);
+        })
+        .catch((error) => {
+            console.error("Error al obtener las contraseñas:", error);
+        });
+}
 
+// Función para almacenar las contraseñas y tiempo en Firebase
+function almacenarContraseña(userId, passwordKey) {
+    const timestamp = Date.now(); // Marca de tiempo actual
+    const contrasenaData = {
+        password: passwordKey,
+        timestamp: timestamp
+    };
+
+    database
+        .ref("passwords/" + userId)
+        .set(contrasenaData)
+        .then(() => {
+            console.log("Contraseña almacenada correctamente para el usuario:", userId);
+        })
+        .catch((error) => {
+            console.error("Error al almacenar la contraseña:", error);
+        });
+}
+
+// Array de usuarios y contraseñas
+const usuarios = [
+    { userId: "usuario1", passwordKey: "G4hT9kLpAzX2M8N7CvBdHqP" },
+    { userId: "usuario2", passwordKey: "L3pN5YqT9kX7zH8M4CvBdW" },
+    { userId: "usuario3", passwordKey: "P7kT9zHqM4N2CvLpG8BdX" },
+    { userId: "usuario4", passwordKey: "XqP7N5kLp9zH4M8CvT2Bd" },
+    { userId: "usuario5", passwordKey: "M8N7CvHqzP4kX2LpBdT9G" },
+    { userId: "usuario6", passwordKey: "T9LpM8Hq7zCvN5XkP2BdG" },
+    { userId: "usuario7", passwordKey: "kLp9T7G8CvHqM2P4zBdXN" },
+    { userId: "usuario8", passwordKey: "qT8M7N2zH9CvLpBdX4kP" },
+    { userId: "usuario9", passwordKey: "N7kLp4CvT9zHqP2BdX8G" },
+    { userId: "usuario10", passwordKey: "CvG2zM4N7qP8LpX9kBdH" },
+    { userId: "usuario11", passwordKey: "TqP7Lp8kN7H9M2XzCvBd" },
+    { userId: "usuario12", passwordKey: "X4T7kLp7zHqN9M2CvBdG" },
+    { userId: "usuario13", passwordKey: "P9kX2LpCvM7N8qBdT4H" },
+    { userId: "usuario14", passwordKey: "qP7kLp8zH9T2N4CvBdX" },
+    { userId: "usuario15", passwordKey: "LpCvH8N7qP2T9zX4BdM" },
+    { userId: "usuario16", passwordKey: "X9zM2LpT7kHqP4CvBdN" },
+    { userId: "usuario17", passwordKey: "TqP7zH8CvN9BdM2kLpX" },
+    { userId: "usuario18", passwordKey: "qG7kLp8T9zCvH2M4BdN" },
+    { userId: "usuario19", passwordKey: "Lp9zHqT7CvP4N8kM2Bd" },
+    { userId: "usuario20", passwordKey: "Hq8T9zCvM2P7N4LpBdX" }
+    // Puedes añadir más usuarios aquí
+];
+
+// Iterar sobre los usuarios y almacenar las contraseñas
+usuarios.forEach(({ userId, passwordKey }) => {
+    almacenarContraseña(userId, passwordKey);
+});
+
+// Llamar a la función para obtener las contraseñas
+obtenerContraseñas();
