@@ -727,3 +727,113 @@ body::before {
     z-index: 1;
     pointer-events: none;
 }
+
+/*Boton de impresion*/
+@media print {
+    body {
+        font-size: 12px;
+        color: black;
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    #print-btn {
+        display: none; /* Oculta el botón de impresión */
+    }
+
+    nav, footer {
+        display: none; /* Oculta elementos innecesarios */
+    }
+
+    #toggle-btn{
+        display: none; /* Oculta boton de cambio de tema*/
+    }
+
+    #language-button {  /* Oculta boton de idioma*/
+        display: none;
+    }
+
+    .container {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        page-break-inside: avoid;
+    }
+
+    .column {
+        width: 33% !important; /* Mantiene las tres columnas */
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    #codigo-qr {
+        display: block !important;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    /* Ajustes para que las columnas no se corten */
+    .column:nth-child(1) {
+        order: 1;
+    }
+    .column:nth-child(2) {
+        order: 2;
+    }
+    .column:nth-child(3) {
+        order: 3;
+    }
+
+    /* Configuración para ajustar a A4 */
+    @page {
+        size: A4 landscape; /* Mantiene el diseño en horizontal */
+        margin: 1cm;
+    }
+    
+}
+
+/* Estilo elegante para el botón */
+#print-btn {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#print-btn:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Ajustes para la impresión */
+@media print {
+    body {
+        font-size: 14px;
+        color: black;
+        background: white;
+    }
+
+    #print-btn {
+        display: none; /* Oculta el botón al imprimir */
+    }
+
+    nav, footer {
+        display: none; /* Oculta el menú de navegación y pie de página */
+    }
+
+    .column {
+        width: 100%; /* Ajusta el contenido para ocupar toda la hoja */
+    }
+
+    #codigo-qr {
+        display: block !important; /* Asegura que el código QR se muestre */
+        text-align: center;
+        margin: 20px 0;
+    }
+}
