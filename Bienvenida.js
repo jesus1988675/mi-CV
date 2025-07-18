@@ -89,7 +89,7 @@ document.getElementById('outlook').href = atob("bWFpbHRvOmplc3VzdXN1YXJpb0BvdXRs
 document.getElementById('facebook').href = atob("aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2plc3VzdXN1YXJpbw=="); // Perfil Facebook
 document.getElementById('email').innerHTML = atob("dXN1YXJpb0BlamVtcGxvLmNvbQ==");
 console.log(btoa("7223326217"));
-console.log(btoa("https://www.linkedin.com/in/tu_cuenta_de_linkedin"));
-console.log(btoa("mailto:jesususuario@outlook.com"));
-console.log(btoa("https://www.facebook.com/jesususuario"));
+console.log(btoa("https://www.linkedin.com/in/jeshua-molina-654602337"));
+console.log(btoa("mailto:Adrianojam@outlook.com"));
+console.log(btoa("https://www.facebook.com/jeshua Hernandez"));
 
