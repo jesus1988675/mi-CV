@@ -73,40 +73,6 @@
         </button>
     </div>
 
-    <div id="login-container"
-        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; z-index: 1000;">
-
-        <h1 data-lang="access-authenticated">Acceso Autenticado</h1>
-
-        <form id="login-form" onsubmit="authenticateUser(event)">
-            <label for="password" data-lang="password-label">Contraseña:</label>
-            <input type="password" id="password" placeholder="Introduce la contraseña" required>
-            <button type="submit" data-lang="confirm-button">Confirmar</button>
-        </form>
-
-        <p id="error-message" style="color: red; display: none;" data-lang="incorrect-password">Contraseña incorrecta.
-            Intenta nuevamente.</p>
-
-        <!-- Enlace para WhatsApp -->
-        <p style="margin-top: 10px; text-align: center;" data-lang="no-password">
-            ¿No tienes una contraseña?
-        <ul>
-            <li>
-                <a href="https://wa.me/5217223326217" target="_blank" rel="noopener noreferrer"
-                    data-lang="contact-whatsapp">
-                    <i class="fab fa-whatsapp" style="color: #25d366; margin-right: 2px;"></i> WhatsApp
-                </a>
-            </li>
-        </ul>
-        </p>
-
-
-        <button onclick="closeLoginContainer()"
-            style="margin-top: 10px; background-color: #f44336; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;"
-            data-lang="close-button">Cerrar</button>
-    </div>
-
-
 
     <!-- Animación Lottie -->
     <dotlottie-player src="https://lottie.host/35b95b01-2b7b-4f70-8a60-a2f9ff34ddf3/HnWyQNUX3A.json"
